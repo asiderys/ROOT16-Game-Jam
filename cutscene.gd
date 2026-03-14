@@ -6,7 +6,7 @@ var slides = [
 	"A new strategy of focusing on community engagement and developing customer relationships through buy-in has been devised.",
 	"You have hired on as the manager of a mobile community food store to put these strategies into action."
 ]
-var cur_slide = -1
+var cur_slide = 0
 var walk_time = 3
 var clickable = true
 enum side {
@@ -18,13 +18,15 @@ func _ready() -> void:
 	var x_size = get_viewport().get_visible_rect().size.x
 	$AnimationPlayer/Guide.position.x =  x_size  - 150
 	$AnimationPlayer/Guide.position.y = get_viewport().get_visible_rect().size.y
-	$SpeachBubble/InfoLbl.text = ""
+	$SpeachBubble/InfoLbl.text = slides[cur_slide]
 	$AnimationPlayer/Guide.play()
 
 func next_slide() -> void:
 	if clickable == false:
 		return
 	clickable = false
+	if cur_slide > (len(slides) - 2):
+		get_tree().change_scene_to_file("res://character_selection/character_selection.tscn")
 	if (cur_slide + 2) % walk_time == 0:
 		if guide_pos == side.RIGHT:
 			$AnimationPlayer.play("WalkLeft")
@@ -40,6 +42,6 @@ func next_slide() -> void:
 	var letter = 0
 	while letter < len(slides[cur_slide]):
 		$SpeachBubble/InfoLbl.text += slides[cur_slide][letter]
-		await get_tree().create_timer(0.03).timeout
+		await get_tree().create_timer(0.02).timeout
 		letter += 1
 	clickable = true
