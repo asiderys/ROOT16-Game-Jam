@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
-var tileSize = 48
+var tileSize = 32 # can change this later just picked one for now
+var animation_speed = 3
+var moving = false
 var inputs = {"ui_right": Vector2.RIGHT, 
 "ui_left": Vector2.LEFT, 
 "ui_up": Vector2.UP, 
@@ -14,17 +16,29 @@ func _ready() -> void:
 	position = position.snapped(Vector2.ONE * tileSize)
 	position += Vector2.ONE * tileSize/2
 
-func _unhandled_input(event: InputEvent) -> void:
-	for dir in inputs.keys():
-		if event.is_action_pressed(dir):
-			move(dir)
+#func _unhandled_input(event: InputEvent) -> void:
+	#for dir in inputs.keys():
+		#if event.is_action_pressed(dir):
+			#move(dir)
+#func move(dir):
+	#var target = inputs[dir] * tileSize
+	#anim.play('move_anim')
+	#if not test_move(global_transform, target):
+		#position += target
 
-func move(dir):
-	var target = inputs[dir] * tileSize
-	anim.play('move_anim')
-	if not test_move(global_transform, target):
-		position += target
-	
+@export var speed = 300
+
+func get_input() -> Vector2:
+	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = input_direction * speed
+	return input_direction
+
+func _physics_process(delta):
+	var input_direction = get_input()
+	if input_direction != Vector2.ZERO:
+		anim.play('move_anim')
+	move_and_slide()
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

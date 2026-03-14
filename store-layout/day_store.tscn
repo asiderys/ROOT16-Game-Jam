@@ -27,8 +27,8 @@ animations = [{
 size = Vector2(233, 45)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eucd7"]
-a = Vector2(1153, 0)
-b = Vector2(0, 0)
+a = Vector2(1150, 181)
+b = Vector2(-3, 181)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ipnrw"]
 a = Vector2(0, 648)
@@ -61,7 +61,7 @@ animation = &"move_anim"
 [node name="Register" type="Node2D" parent="." unique_id=1770918848]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Register" unique_id=1421475735]
-position = Vector2(2, 161)
+position = Vector2(1, 184)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Register/StaticBody2D" unique_id=448227590]
 position = Vector2(163.5, 168.5)
