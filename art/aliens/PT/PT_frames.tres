@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://fa0ygf7kd8x7"]
+
+[ext_resource type="Texture2D" uid="uid://b1p4qpv6qaqda" path="res://art/aliens/PT/PT 1.png" id="1_ve2ki"]
+[ext_resource type="Texture2D" uid="uid://cyc7n2sn1x1rs" path="res://art/aliens/PT/PT 2.png" id="2_27ai8"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ve2ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_27ai8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

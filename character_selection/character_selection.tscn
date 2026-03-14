@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://ibf5jd1xa61l"]
+
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_0p0vs"]
+[ext_resource type="Script" uid="uid://dlqipr3q8uaas" path="res://character_selection/character_selection.gd" id="1_g8q2a"]
+[ext_resource type="Script" uid="uid://bvfeguayyunjg" path="res://character_selection/guide.gd" id="4_etmm7"]
+[ext_resource type="SpriteFrames" uid="uid://damlu10ku3ce" path="res://art/aliens/blorpl/blorpl_frames.tres" id="5_etmm7"]
+[ext_resource type="SpriteFrames" uid="uid://ctwie4j1g058m" path="res://art/aliens/strange_steve/strange_steve_frames.tres" id="7_0lje1"]
+[ext_resource type="PackedScene" uid="uid://8qay6q5iwyxt" path="res://alien_voice/alien_voice.tscn" id="7_odr2s"]
+
+[node name="CharacterSelection" type="Control" unique_id=93252415]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8q2a")
+
+[node name="Background" type="TextureRect" parent="." unique_id=858483541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0p0vs")
+expand_mode = 3
+
+[node name="SelectLbl" type="Label" parent="." unique_id=2036187707]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 118.0
+offset_bottom = 181.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "Select a Character"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueContainer" type="Control" parent="." unique_id=935102749]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -96.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContinueBtn" type="Button" parent="ContinueContainer" unique_id=1253770905]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -76.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+
+[node name="Guide" type="Control" parent="." unique_id=1288165488]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("4_etmm7")
+
+[node name="GuideFrames" type="AnimatedSprite2D" parent="Guide" unique_id=680985601]
+position = Vector2(156, -83.00001)
+scale = Vector2(0.21444449, 0.21444446)
+sprite_frames = ExtResource("5_etmm7")
+
+[node name="AlienVoice" parent="Guide" unique_id=137993742 instance=ExtResource("7_odr2s")]
+
+[node name="ColorRect" type="ColorRect" parent="Guide" unique_id=338113491]
+layout_mode = 0
+offset_left = 260.0
+offset_top = -418.0
+offset_right = 670.0
+offset_bottom = -217.0
+
+[node name="Label" type="Label" parent="Guide/ColorRect" unique_id=1257877970]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Go ahead and choose your alien!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SelectedVBox" type="VBoxContainer" parent="." unique_id=1446250245]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="SelectedHBox" type="HBoxContainer" parent="SelectedVBox" unique_id=1473841477]
+layout_mode = 2
+alignment = 1
+
+[node name="Selected" type="AnimatedSprite2D" parent="SelectedVBox/SelectedHBox" unique_id=1273799432]
+scale = Vector2(0.3, 0.3)
+sprite_frames = ExtResource("7_0lje1")
+
+[node name="ChangeSprite" type="HBoxContainer" parent="." unique_id=43734237]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 279.0
+offset_bottom = 329.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 300
+alignment = 1
+
+[node name="Prev" type="Button" parent="ChangeSprite" unique_id=151221283]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "<"
+
+[node name="Next" type="Button" parent="ChangeSprite" unique_id=1683792461]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = ">"
+
+[connection signal="pressed" from="ChangeSprite/Prev" to="." method="prev_sprite"]
+[connection signal="pressed" from="ChangeSprite/Next" to="." method="next_sprite"]

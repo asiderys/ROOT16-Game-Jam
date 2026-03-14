@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgm3i5qw0i7lu"]
+
+[ext_resource type="Texture2D" uid="uid://b1m56vhpwqk83" path="res://art/aliens/bello_jello/Bello Jello 1.png" id="1_5jttb"]
+[ext_resource type="Texture2D" uid="uid://bhcy5t7to1na8" path="res://art/aliens/bello_jello/Bello Jello 2.png" id="2_4y67b"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5jttb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4y67b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
