@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://ibf5jd1xa61l"]
+
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://START PAGE Background.jpg" id="1_0p0vs"]
+[ext_resource type="Script" uid="uid://dlqipr3q8uaas" path="res://character_selection/character_selection.gd" id="1_g8q2a"]
+[ext_resource type="Texture2D" uid="uid://fo27rpgrtwec" path="res://icon.svg" id="2_g8q2a"]
+
+[node name="CharacterSelection" type="Control" unique_id=93252415]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g8q2a")
+
+[node name="Background" type="TextureRect" parent="." unique_id=858483541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0p0vs")
+expand_mode = 3
+
+[node name="SelectLbl" type="Label" parent="." unique_id=2036187707]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 118.0
+offset_bottom = 181.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 45
+text = "Select a Character"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharacterBox" type="HBoxContainer" parent="." unique_id=1984510769]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="TextureButton3" type="TextureButton" parent="CharacterBox" unique_id=342458025]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_g8q2a")
+
+[node name="TextureButton4" type="TextureButton" parent="CharacterBox" unique_id=1314993141]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_g8q2a")
+
+[node name="TextureButton5" type="TextureButton" parent="CharacterBox" unique_id=1542591608]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_g8q2a")
+
+[node name="ContinueContainer" type="Control" parent="." unique_id=935102749]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -96.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContinueBtn" type="Button" parent="ContinueContainer" unique_id=1253770905]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -76.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Continue"
