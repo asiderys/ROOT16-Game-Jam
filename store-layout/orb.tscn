@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c2sjaow330chm"]
+
+[ext_resource type="Texture2D" uid="uid://4yiwgun0f1im" path="res://Orb 1.png" id="1_fkknb"]
+[ext_resource type="Texture2D" uid="uid://dbolvqqn2ufuy" path="res://Orb 2.png" id="2_ys6sa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8tt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fkknb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ys6sa")
+}],
+"loop": true,
+"name": &"orbMotion",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fkknb"]
+radius = 23.086792
+
+[node name="Node2D" type="Node2D" unique_id=201679181]
+y_sort_enabled = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=669707072]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=2051222422]
+y_sort_enabled = true
+scale = Vector2(0.13108109, 0.13108109)
+sprite_frames = SubResource("SpriteFrames_o8tt0")
+animation = &"orbMotion"
+frame_progress = 0.9819641
+offset = Vector2(0, -500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1810027140]
+y_sort_enabled = true
+position = Vector2(1, -39)
+shape = SubResource("CircleShape2D_fkknb")

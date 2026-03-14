@@ -42,6 +42,12 @@ b = Vector2(1152, 650)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_c0k3n"]
 b = Vector2(0, 650)
 
+[sub_resource type="Curve2D" id="Curve2D_ipnrw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 907, 596, 0, 0, 0, 0, 1071, 521, 0, 0, 0, 0, 1068, 407, 0, 0, 0, 0, 781, 397, 0, 0, 0, 0, 244, 418, 0, 0, 0, 0, 227, 609)
+}
+point_count = 6
+
 [node name="Node2D" type="Node2D" unique_id=555568952]
 y_sort_enabled = true
 script = ExtResource("1_ipnrw")
@@ -111,3 +117,12 @@ position = Vector2(180, 361.00003)
 scale = Vector2(0.29559526, 0.23511901)
 texture = ExtResource("3_i5ce1")
 offset = Vector2(0, -300)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1119737323]
+y_sort_enabled = true
+curve = SubResource("Curve2D_ipnrw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1630540402]
+position = Vector2(907, 596)
+rotation = -0.42892215
+rotates = false
