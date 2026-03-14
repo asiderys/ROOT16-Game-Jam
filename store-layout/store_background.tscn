@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ci3hv60ioh843"]
+
+[ext_resource type="Texture2D" uid="uid://btvfelcjnlqhv" path="res://store-layout/Background.jpg" id="1_hp8yw"]
+
+[node name="Node2D" type="Node2D" unique_id=2065809239]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=606107732]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70584380]
+position = Vector2(575.2223, 322.18747)
+scale = Vector2(0.19070373, 0.19070372)
+texture = ExtResource("1_hp8yw")

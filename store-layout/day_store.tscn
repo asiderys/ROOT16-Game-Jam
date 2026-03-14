@@ -1,40 +1,89 @@
 [gd_scene format=3 uid="uid://beg4c82odsfjx"]
 
+[ext_resource type="PackedScene" uid="uid://ci3hv60ioh843" path="res://store-layout/store_background.tscn" id="1_2dbit"]
 [ext_resource type="Script" uid="uid://bk6ar2qhfyoco" path="res://store-layout/TileMovement.gd" id="1_p4ya5"]
-[ext_resource type="Texture2D" uid="uid://fo27rpgrtwec" path="res://icon.svg" id="2_x04qp"]
+[ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/Blorpl 1.png" id="3_2dbit"]
 [ext_resource type="Texture2D" uid="uid://byvrdtmtw5qcr" path="res://store-layout/FRONT CASHIER REGISTER.png" id="3_i5ce1"]
+[ext_resource type="Texture2D" uid="uid://djhe50owpgrn4" path="res://store-layout/Blorpl 2.png" id="4_eucd7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a458"]
-size = Vector2(130, 124)
+[sub_resource type="CircleShape2D" id="CircleShape2D_2dbit"]
+radius = 56.008926
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipnrw"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("3_2dbit")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_eucd7")
+}],
+"loop": false,
+"name": &"move_anim",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dbit"]
-size = Vector2(233, 126)
+size = Vector2(233, 45)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eucd7"]
+a = Vector2(1153, 0)
+b = Vector2(0, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ipnrw"]
+a = Vector2(0, 648)
+b = Vector2(1152, 648)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_urqch"]
+a = Vector2(1152, -1)
+b = Vector2(1152, 650)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c0k3n"]
+b = Vector2(0, 650)
 
 [node name="Node2D" type="Node2D" unique_id=555568952]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=847906698]
+[node name="Background" parent="." unique_id=2065809239 instance=ExtResource("1_2dbit")]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2045894891]
 script = ExtResource("1_p4ya5")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=173759580]
-position = Vector2(574, 329)
-texture = ExtResource("2_x04qp")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=74512500]
+position = Vector2(396, 509)
+shape = SubResource("CircleShape2D_2dbit")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=696918508]
-position = Vector2(575, 328)
-shape = SubResource("RectangleShape2D_6a458")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=68956338]
+position = Vector2(398.00003, 503.00003)
+scale = Vector2(0.101851806, 0.101851806)
+sprite_frames = SubResource("SpriteFrames_ipnrw")
+animation = &"move_anim"
 
-[node name="RayCast2D" type="RayCast2D" parent="Area2D" unique_id=1477117363]
-position = Vector2(575, 328)
+[node name="Register" type="Node2D" parent="." unique_id=1770918848]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1770918848]
+[node name="StaticBody2D" type="StaticBody2D" parent="Register" unique_id=1421475735]
+position = Vector2(2, 161)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Node2D" unique_id=1421475735]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D" unique_id=448227590]
-position = Vector2(163.5, 137)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Register/StaticBody2D" unique_id=448227590]
+position = Vector2(163.5, 168.5)
 shape = SubResource("RectangleShape2D_2dbit")
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D/StaticBody2D" unique_id=1665357388]
+[node name="Sprite2D" type="Sprite2D" parent="Register/StaticBody2D" unique_id=1665357388]
 position = Vector2(161.99994, 104)
 scale = Vector2(0.22976188, 0.2297619)
 texture = ExtResource("3_i5ce1")
+
+[node name="Walls" type="Node2D" parent="." unique_id=273816452]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" unique_id=2136517970]
+
+[node name="north_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=946342620]
+shape = SubResource("SegmentShape2D_eucd7")
+
+[node name="south_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=976555020]
+shape = SubResource("SegmentShape2D_ipnrw")
+
+[node name="east_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1515999969]
+shape = SubResource("SegmentShape2D_urqch")
+
+[node name="west_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=864987462]
+shape = SubResource("SegmentShape2D_c0k3n")
