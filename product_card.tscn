@@ -91,37 +91,55 @@ vertical_alignment = 1
 
 [node name="CoinIcon" type="TextureRect" parent="." unique_id=592293909]
 layout_mode = 0
-offset_left = 103.0
-offset_top = 544.00006
-offset_right = 231.0
-offset_bottom = 672.00006
+offset_left = 73.0
+offset_top = 543.0
+offset_right = 201.0
+offset_bottom = 671.0
 scale = Vector2(0.405, 0.405)
 texture = ExtResource("1_t13al")
 
 [node name="TrustIcon" type="TextureRect" parent="." unique_id=1946258989]
 layout_mode = 0
-offset_left = 247.99998
-offset_top = 544.0
-offset_right = 376.0
-offset_bottom = 672.0
+offset_left = 194.99998
+offset_top = 543.0
+offset_right = 323.0
+offset_bottom = 671.0
 scale = Vector2(0.425, 0.425)
 texture = ExtResource("1_t13al")
 
 [node name="CoinsCount" type="Label" parent="." unique_id=1923440973]
 layout_mode = 0
-offset_left = 163.99998
-offset_top = 549.0
-offset_right = 207.99998
-offset_bottom = 591.0
+offset_left = 133.99998
+offset_top = 547.99994
+offset_right = 178.0
+offset_bottom = 589.99994
 theme_override_font_sizes/font_size = 30
 text = "-40"
 
+[node name="ProfitIcon" type="TextureRect" parent="." unique_id=405294746]
+layout_mode = 0
+offset_left = 330.00003
+offset_top = 546.99994
+offset_right = 458.00003
+offset_bottom = 674.99994
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("1_t13al")
+
+[node name="ProfitCount" type="Label" parent="." unique_id=767356894]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 550.0
+offset_right = 441.0
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 30
+text = "15"
+
 [node name="TrustCount" type="Label" parent="." unique_id=1371218531]
 layout_mode = 0
-offset_left = 318.0
-offset_top = 549.0
-offset_right = 369.0
-offset_bottom = 591.0
+offset_left = 265.0
+offset_top = 548.0
+offset_right = 316.0
+offset_bottom = 590.0
 theme_override_font_sizes/font_size = 30
 text = "+25"
 
