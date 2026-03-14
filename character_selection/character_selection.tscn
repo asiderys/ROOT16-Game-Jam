@@ -2,11 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_0p0vs"]
 [ext_resource type="Script" uid="uid://dlqipr3q8uaas" path="res://character_selection/character_selection.gd" id="1_g8q2a"]
+[ext_resource type="Theme" uid="uid://b0v6fmwcig6rw" path="res://art/ui_elements/buttons/purple.tres" id="3_ftqaf"]
 [ext_resource type="Script" uid="uid://bvfeguayyunjg" path="res://character_selection/guide.gd" id="4_etmm7"]
 [ext_resource type="SpriteFrames" uid="uid://damlu10ku3ce" path="res://art/aliens/blorpl/blorpl_frames.tres" id="5_etmm7"]
 [ext_resource type="SpriteFrames" uid="uid://ctwie4j1g058m" path="res://art/aliens/strange_steve/strange_steve_frames.tres" id="7_0lje1"]
 [ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="7_ftqaf"]
 [ext_resource type="PackedScene" uid="uid://8qay6q5iwyxt" path="res://alien_voice/alien_voice.tscn" id="7_odr2s"]
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="7_uqmvk"]
 
 [node name="CharacterSelection" type="Control" unique_id=93252415]
 layout_mode = 3
@@ -34,6 +36,7 @@ anchor_right = 1.0
 offset_top = 118.0
 offset_bottom = 181.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("7_uqmvk")
 theme_override_font_sizes/font_size = 45
 text = "Select a Character"
 horizontal_alignment = 1
@@ -62,6 +65,7 @@ offset_top = -76.0
 offset_right = 96.0
 grow_horizontal = 2
 grow_vertical = 0
+theme = ExtResource("3_ftqaf")
 theme_override_font_sizes/font_size = 25
 text = "Continue"
 
@@ -82,8 +86,8 @@ sprite_frames = ExtResource("5_etmm7")
 
 [node name="AlienVoice" parent="Guide" unique_id=137993742 instance=ExtResource("7_odr2s")]
 
-[node name="ColorRect" type="ColorRect" parent="Guide" unique_id=338113491]
-layout_mode = 0
+[node name="ColorRect" type="Control" parent="Guide" unique_id=1526567121]
+anchors_preset = 0
 offset_left = 260.0
 offset_top = -418.0
 offset_right = 670.0
@@ -94,9 +98,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = 59.0
+offset_right = -31.0
+offset_bottom = 59.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_uqmvk")
 theme_override_font_sizes/font_size = 22
 text = "Go ahead and choose your alien!"
 horizontal_alignment = 1
@@ -137,15 +146,19 @@ alignment = 1
 [node name="Prev" type="Button" parent="ChangeSprite" unique_id=151221283]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+theme = ExtResource("3_ftqaf")
 text = "<"
 
 [node name="Next" type="Button" parent="ChangeSprite" unique_id=1683792461]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+theme = ExtResource("3_ftqaf")
 text = ">"
 
 [node name="CharacterSelectionMusic" type="AudioStreamPlayer2D" parent="." unique_id=267830055]
 stream = ExtResource("7_ftqaf")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="ChangeSprite/Prev" to="." method="prev_sprite"]
 [connection signal="pressed" from="ChangeSprite/Next" to="." method="next_sprite"]
