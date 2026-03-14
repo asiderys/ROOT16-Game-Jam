@@ -1,7 +1,26 @@
 extends Control
 
-func select_character(button):
-	global.player_sprite = button.texture_normal
+var aliens = [
+	"blorpl",
+	"bello_jello",
+	"goomi_gami",
+	"orb",
+	"PT",
+	"sausage",
+	"SPHEEP",
+	"strange_steve"
+]
+var current_alien = 0
 func _ready() -> void:
-	for button in $CharacterBox.get_children():
-		button.pressed.connect(select_character.bind(button))
+	$SelectedVBox/SelectedHBox/Selected.sprite_frames = load("res://art/aliens/" + aliens[current_alien] + "/" + aliens[current_alien] + "_frames.tres")
+	$SelectedVBox/SelectedHBox/Selected.play()
+func next_sprite():
+	current_alien = (current_alien + 1) % len(aliens)
+	$SelectedVBox/SelectedHBox/Selected.sprite_frames = load("res://art/aliens/" + aliens[current_alien] + "/" + aliens[current_alien] + "_frames.tres")
+	$SelectedVBox/SelectedHBox/Selected.play()
+	global.player_sprite = $SelectedVBox/SelectedHBox/Selected.sprite_frames
+func prev_sprite():
+	current_alien = (current_alien - 1) % len(aliens)
+	$SelectedVBox/SelectedHBox/Selected.sprite_frames = load("res://art/aliens/" + aliens[current_alien] + "/" + aliens[current_alien] + "_frames.tres")
+	$SelectedVBox/SelectedHBox/Selected.play()
+	global.player_sprite = $SelectedVBox/SelectedHBox/Selected.sprite_frames

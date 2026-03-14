@@ -68,5 +68,6 @@ stretch_mode = 4
 [node name="TitleMusic" type="AudioStreamPlayer2D" parent="." unique_id=1403443352]
 stream = ExtResource("5_o6flq")
 autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="play-button" to="." method="_on_playbutton_pressed"]
