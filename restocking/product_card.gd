@@ -1,5 +1,5 @@
 extends Control
-const product_data = preload("res://product_data.gd")
+const product_data = preload("res://restocking/product_data.gd")
 var amount_purchase = 0
 var self_data:product_data = null
 
@@ -15,6 +15,7 @@ func set_up_vals(data: product_data):
 	$CoinsCount.text = str(data.cost)
 	$TrustCount.text = str(data.trust_value)
 	$ProfitCount.text = str(data.sell_price)
+	$ItemIcon.texture = load("res://art/buckets/" + str(data.texture) + ".png")
 
 func decrease_purchase_amount() -> void:
 	if amount_purchase > 0:

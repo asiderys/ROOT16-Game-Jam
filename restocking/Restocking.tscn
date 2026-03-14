@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://d3u6b4ritm0s2"]
+
+[ext_resource type="Script" uid="uid://2t6ms3cgrhmr" path="res://restocking/restocking.gd" id="1_pbe4y"]
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="2_u4wal"]
+[ext_resource type="AudioStream" uid="uid://blmry5sf6ax7n" path="res://music/stockingmusic.mp3" id="3_7puuq"]
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="3_qo6ir"]
+[ext_resource type="Theme" uid="uid://b0v6fmwcig6rw" path="res://art/ui_elements/buttons/purple.tres" id="4_7111s"]
+
+[sub_resource type="Animation" id="Animation_575rj"]
+resource_name = "PurchaseError"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/HBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 0.16666667, 0.20000002, 0.23333335, 0.26666668, 0.3, 0.33333334, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-25, 0), Vector2(0, 0), Vector2(25, 0), Vector2(0, 0), Vector2(-25, 0), Vector2(0, 0), Vector2(25, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer/StatusBar:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.46666667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Color(0.3137255, 0.17254902, 0.4117647, 1), Color(0.87058824, 0.14117648, 0.14509805, 1), Color(0.87058824, 0.14117648, 0.14509805, 1), Color(0.3137255, 0.17254902, 0.4117647, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pbe4y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AnimationPlayer/HBoxContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AnimationPlayer/StatusBar:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.3137255, 0.17254902, 0.4117647, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n0kda"]
+_data = {
+&"PurchaseError": SubResource("Animation_575rj"),
+&"RESET": SubResource("Animation_pbe4y")
+}
+
+[node name="Restocking" type="Control" unique_id=1323624672]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pbe4y")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=981347603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_u4wal")
+expand_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1614275042]
+root_node = NodePath("../Layout")
+libraries/ = SubResource("AnimationLibrary_n0kda")
+
+[node name="StatusBar" type="ColorRect" parent="AnimationPlayer" unique_id=748954259]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.068
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3137255, 0.17254902, 0.4117647, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnimationPlayer" unique_id=168741926]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.068
+grow_horizontal = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="CurrentCost" type="Label" parent="AnimationPlayer/HBoxContainer" unique_id=1338835133]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qo6ir")
+theme_override_font_sizes/font_size = 30
+text = "Current cost: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Money" type="Label" parent="AnimationPlayer/HBoxContainer" unique_id=286259757]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_qo6ir")
+theme_override_font_sizes/font_size = 30
+text = "Money: 100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1230722064]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.086
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollBox" type="ScrollContainer" parent="Layout" unique_id=1152177846]
+custom_minimum_size = Vector2(6.015, 13.545)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProductCardContainer" type="GridContainer" parent="Layout/ScrollBox" unique_id=2145477403]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 2
+
+[node name="Control" type="Control" parent="." unique_id=486325215]
+layout_mode = 1
+anchor_top = 0.89
+anchor_right = 1.0
+anchor_bottom = 0.96
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="Control" unique_id=710807426]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78
+anchor_top = 0.6
+anchor_right = 0.98
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_7111s")
+theme_override_colors/icon_normal_color = Color(0.49919003, 0.97400683, 0.9999998, 1)
+text = "Check Out →"
+
+[node name="StockingMusic" type="AudioStreamPlayer2D" parent="." unique_id=2072993363]
+stream = ExtResource("3_7puuq")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Control/Button" to="." method="submit_purchase"]

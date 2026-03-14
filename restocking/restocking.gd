@@ -1,18 +1,18 @@
 extends Control
-@onready var product_card_scene = preload("res://product_card.tscn")
-const product_data = preload("res://product_data.gd")
+@onready var product_card_scene = preload("res://restocking/product_card.tscn")
+const product_data = preload("res://restocking/product_data.gd")
 var total_cost = 0
+var bucket_num = 8
 func _ready() -> void:
-	randomize()
-	var loop_times = 5;
-	for i in range(loop_times):
+	for i in range(bucket_num):
 		var data = product_data.new()
 		data.cost = (randi() % 10) * 1
 		data.item_name = "Item #" + str(i)
 		data.sell_price = randi() % 20
 		data.trust_value = randi() % 5
 		data.store_name = "Store #" + str(randi() % 3)
-		data.id = i
+		data.id = i + 1
+		data.texture = i + 1
 		setup(data)
 func setup(data: product_data):
 	var product_card = product_card_scene.instantiate()
@@ -21,7 +21,7 @@ func setup(data: product_data):
 
 func update_total_cost(update_val):
 	total_cost += update_val
-	$Layout/AnimationPlayer/HBoxContainer/CurrentCost.text = "Current cost: " + str(total_cost)
+	$AnimationPlayer/HBoxContainer/CurrentCost.text = "Current cost: " + str(total_cost)
 func submit_purchase() -> void:
 	if global.money >= total_cost:
 		for product in $Layout/ScrollBox/ProductCardContainer.get_children():
@@ -31,4 +31,4 @@ func submit_purchase() -> void:
 		for i in global.store_stock.keys():
 			print(i.item_name + ": " + str(global.store_stock[i]))
 	else:
-		$Layout/AnimationPlayer.play("PurchaseError")
+		$AnimationPlayer.play("PurchaseError")

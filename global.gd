@@ -14,3 +14,53 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+var buckets_data = {
+	1: {
+		"name":"Zorp 1",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		2: {
+		"name":"Zorp 2",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		3: {
+		"name":"Zorp 3",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		4: {
+		"name":"Zorp 4",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		5: {
+		"name":"Zorp 5",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		6: {
+		"name":"Zorp 6",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		7: {
+		"name":"Zorp 7",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	},
+		8: {
+		"name":"Zorp 1",
+		"cost": 10.0,
+		"profit": 15.0,
+		"trust": 5
+	}
+}

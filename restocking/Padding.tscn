@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cewh2kjxjqqc1"]
+
+[node name="Padding" type="ColorRect" unique_id=82309623]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5081511, 0.99999994, 0.93518466, 1)

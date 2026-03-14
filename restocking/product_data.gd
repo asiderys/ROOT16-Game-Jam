@@ -6,3 +6,4 @@ extends Resource
 @export var sell_price = 4
 @export var trust_value = 16
 @export var id = 0
+@export var texture = ""
