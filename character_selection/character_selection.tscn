@@ -36,43 +36,58 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CharacterBox" type="HBoxContainer" parent="." unique_id=1984510769]
-layout_mode = 0
-offset_left = 217.0
-offset_top = 154.0
-offset_right = 930.0
-offset_bottom = 466.0
-
-[node name="TextureButton" type="TextureButton" parent="CharacterBox" unique_id=1524743820]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture_normal = ExtResource("2_g8q2a")
-texture_pressed = ExtResource("2_g8q2a")
-texture_hover = ExtResource("2_g8q2a")
-
-[node name="TextureButton2" type="TextureButton" parent="CharacterBox" unique_id=1366999640]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-texture_normal = ExtResource("2_g8q2a")
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 45
+alignment = 1
 
 [node name="TextureButton3" type="TextureButton" parent="CharacterBox" unique_id=342458025]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_g8q2a")
 
-[node name="TextureButton4" type="TextureButton" parent="CharacterBox" unique_id=1142098471]
+[node name="TextureButton4" type="TextureButton" parent="CharacterBox" unique_id=1314993141]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_g8q2a")
 
-[node name="Button" type="Button" parent="." unique_id=1253770905]
-layout_mode = 0
-offset_left = 476.0
-offset_top = 445.0
-offset_right = 668.0
-offset_bottom = 521.0
+[node name="TextureButton5" type="TextureButton" parent="CharacterBox" unique_id=1542591608]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_g8q2a")
+
+[node name="ContinueContainer" type="Control" parent="." unique_id=935102749]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -96.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContinueBtn" type="Button" parent="ContinueContainer" unique_id=1253770905]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -76.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 text = "Continue"
