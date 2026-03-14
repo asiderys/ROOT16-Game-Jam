@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://dtxngu4u3aui3"]
 
 [ext_resource type="Texture2D" uid="uid://fo27rpgrtwec" path="res://icon.svg" id="1_t13al"]
+[ext_resource type="Script" uid="uid://d2sgm1uley0o3" path="res://product_card.gd" id="1_y2gr7"]
 
-[node name="ProductCard" type="Control" unique_id=276823760]
+[node name="ProductCard" type="Control" unique_id=1393804491]
+custom_minimum_size = Vector2(507, 647)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -690.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.45400003
+anchor_bottom = 0.5
+offset_right = -16.008057
+offset_bottom = 323.0
+script = ExtResource("1_y2gr7")
 
 [node name="Background" type="ColorRect" parent="." unique_id=697222245]
 layout_mode = 1
@@ -61,6 +62,7 @@ offset_right = 279.0
 offset_bottom = 445.0
 theme_override_font_sizes/font_size = 45
 text = "150"
+horizontal_alignment = 1
 
 [node name="Increase" type="Button" parent="." unique_id=614458908]
 custom_minimum_size = Vector2(40, 0)
@@ -122,3 +124,6 @@ offset_right = 369.0
 offset_bottom = 591.0
 theme_override_font_sizes/font_size = 30
 text = "+25"
+
+[connection signal="pressed" from="Decrease" to="." method="decrease_purchase_amount"]
+[connection signal="pressed" from="Increase" to="." method="increase_purchase_amount"]

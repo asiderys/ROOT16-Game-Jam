@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dghjohdt4f5s8"]
+
+[ext_resource type="PackedScene" uid="uid://dtxngu4u3aui3" path="res://product_card.tscn" id="1_575rj"]
+
+[node name="Restocking" type="Control" unique_id=1323624672]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1152177846]
+custom_minimum_size = Vector2(6.015, 13.545)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="GridContainer" parent="ScrollContainer" unique_id=2145477403]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="ProductCard2" parent="ScrollContainer/VBoxContainer" unique_id=897568947 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard3" parent="ScrollContainer/VBoxContainer" unique_id=2112848937 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard4" parent="ScrollContainer/VBoxContainer" unique_id=1564079644 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard5" parent="ScrollContainer/VBoxContainer" unique_id=1605225416 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard6" parent="ScrollContainer/VBoxContainer" unique_id=2107944140 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard7" parent="ScrollContainer/VBoxContainer" unique_id=1445310710 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard8" parent="ScrollContainer/VBoxContainer" unique_id=1281273093 instance=ExtResource("1_575rj")]
+layout_mode = 2
+
+[node name="ProductCard" parent="ScrollContainer/VBoxContainer" unique_id=276823760 instance=ExtResource("1_575rj")]
+layout_mode = 2
