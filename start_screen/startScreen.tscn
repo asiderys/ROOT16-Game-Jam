@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://3bbqamc6efey"]
 
-[ext_resource type="Texture2D" uid="uid://buw0m46g06o8b" path="res://START PAGE Background (1).jpg" id="1_ev681"]
-[ext_resource type="Script" uid="uid://4bnicmn313su" path="res://start_screen.gd" id="1_w8rx1"]
-[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://START PAGE Title Text.png" id="2_w8rx1"]
-[ext_resource type="Texture2D" uid="uid://qubon4b06i8v" path="res://START PAGE Play Button.png" id="3_gxmh3"]
+[ext_resource type="Script" uid="uid://4bnicmn313su" path="res://start_screen/start_screen.gd" id="1_w8rx1"]
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="2_o2g4g"]
+[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://art/ui_elements/START PAGE Title Text.png" id="2_w8rx1"]
+[ext_resource type="Texture2D" uid="uid://qubon4b06i8v" path="res://art/ui_elements/START PAGE Play Button.png" id="3_gxmh3"]
+[ext_resource type="AudioStream" uid="uid://bf5f1lcjsgx47" path="res://music/titlemusic.mp3" id="5_o6flq"]
 
 [node name="Control" type="Control" unique_id=1747520824]
 layout_mode = 3
@@ -24,7 +25,7 @@ offset_top = -1.0
 offset_right = 33.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_ev681")
+texture = ExtResource("2_o2g4g")
 expand_mode = 1
 stretch_mode = 4
 
@@ -63,5 +64,9 @@ texture_normal = ExtResource("3_gxmh3")
 texture_pressed = ExtResource("3_gxmh3")
 ignore_texture_size = true
 stretch_mode = 4
+
+[node name="TitleMusic" type="AudioStreamPlayer2D" parent="." unique_id=1403443352]
+stream = ExtResource("5_o6flq")
+autoplay = true
 
 [connection signal="pressed" from="play-button" to="." method="_on_playbutton_pressed"]

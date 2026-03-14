@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i0fcu4bs5gy1"
-path="res://.godot/imported/START PAGE Title Text.png-479a731c4ed73f8e9322e13f24a89b23.ctex"
+uid="uid://chsv3v62m1en2"
+path="res://.godot/imported/borpl01.png-7c08375ec2ed25720d48d281c9cba6e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://START PAGE Title Text.png"
-dest_files=["res://.godot/imported/START PAGE Title Text.png-479a731c4ed73f8e9322e13f24a89b23.ctex"]
+source_file="res://art/aliens/blorpl/borpl01.png"
+dest_files=["res://.godot/imported/borpl01.png-7c08375ec2ed25720d48d281c9cba6e2.ctex"]
 
 [params]
 

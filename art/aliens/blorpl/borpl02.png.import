@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chsv3v62m1en2"
-path="res://.godot/imported/PinkAlien0.png-65fc7803650c596cfbf81ddf20ccb267.ctex"
+uid="uid://c7lfiyixgea4l"
+path="res://.godot/imported/borpl02.png-b38a089d995538cb832f3a9983608523.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PinkAlien0.png"
-dest_files=["res://.godot/imported/PinkAlien0.png-65fc7803650c596cfbf81ddf20ccb267.ctex"]
+source_file="res://art/aliens/blorpl/borpl02.png"
+dest_files=["res://.godot/imported/borpl02.png-b38a089d995538cb832f3a9983608523.ctex"]
 
 [params]
 

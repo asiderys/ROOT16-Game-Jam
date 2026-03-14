@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://8qay6q5iwyxt"]
+
+[ext_resource type="Script" uid="uid://bvxpr60r2vho" path="res://alien_voice/alien_voice.gd" id="1_ow73k"]
+
+[node name="AlienVoice" type="AudioStreamPlayer2D" unique_id=137993742]
+script = ExtResource("1_ow73k")

@@ -1,8 +1,26 @@
 [gd_scene format=3 uid="uid://ibf5jd1xa61l"]
 
-[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://START PAGE Background.jpg" id="1_0p0vs"]
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_0p0vs"]
 [ext_resource type="Script" uid="uid://dlqipr3q8uaas" path="res://character_selection/character_selection.gd" id="1_g8q2a"]
 [ext_resource type="Texture2D" uid="uid://fo27rpgrtwec" path="res://icon.svg" id="2_g8q2a"]
+[ext_resource type="Script" uid="uid://bvfeguayyunjg" path="res://character_selection/guide.gd" id="4_etmm7"]
+[ext_resource type="Texture2D" uid="uid://chsv3v62m1en2" path="res://art/aliens/blorpl/borpl01.png" id="4_qda2x"]
+[ext_resource type="Texture2D" uid="uid://c7lfiyixgea4l" path="res://art/aliens/blorpl/borpl02.png" id="5_etmm7"]
+[ext_resource type="PackedScene" uid="uid://8qay6q5iwyxt" path="res://alien_voice/alien_voice.tscn" id="7_odr2s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odr2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qda2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_etmm7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="CharacterSelection" type="Control" unique_id=93252415]
 layout_mode = 3
@@ -91,3 +109,41 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 25
 text = "Continue"
+
+[node name="Guide" type="Control" parent="." unique_id=1288165488]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("4_etmm7")
+
+[node name="GuideFrames" type="AnimatedSprite2D" parent="Guide" unique_id=680985601]
+position = Vector2(156, -83.00001)
+scale = Vector2(0.21444449, 0.21444446)
+sprite_frames = SubResource("SpriteFrames_odr2s")
+
+[node name="AlienVoice" parent="Guide" unique_id=137993742 instance=ExtResource("7_odr2s")]
+
+[node name="ColorRect" type="ColorRect" parent="Guide" unique_id=338113491]
+layout_mode = 0
+offset_left = 260.0
+offset_top = -418.0
+offset_right = 670.0
+offset_bottom = -217.0
+
+[node name="Label" type="Label" parent="Guide/ColorRect" unique_id=1257877970]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Go ahead and choose your alien!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

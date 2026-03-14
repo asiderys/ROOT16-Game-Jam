@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cb2iayirmihbw"]
 
-[ext_resource type="Script" uid="uid://des5blktv8v0v" path="res://cutscene.gd" id="1_bl24s"]
-[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://START PAGE Background.jpg" id="1_ye7fo"]
-[ext_resource type="Texture2D" uid="uid://chsv3v62m1en2" path="res://PinkAlien0.png" id="2_8vcau"]
-[ext_resource type="Texture2D" uid="uid://c7lfiyixgea4l" path="res://PinkAlien1.png" id="3_bl24s"]
-[ext_resource type="Script" path="res://audio_stream_player_2d.gd" id="5_u4yv4"]
+[ext_resource type="Script" uid="uid://des5blktv8v0v" path="res://cutscene/cutscene.gd" id="1_bl24s"]
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_ye7fo"]
+[ext_resource type="Texture2D" uid="uid://chsv3v62m1en2" path="res://art/aliens/blorpl/borpl01.png" id="2_8vcau"]
+[ext_resource type="Texture2D" uid="uid://c7lfiyixgea4l" path="res://art/aliens/blorpl/borpl02.png" id="3_bl24s"]
+[ext_resource type="Script" uid="uid://bvxpr60r2vho" path="res://alien_voice/alien_voice.gd" id="5_u4yv4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4yv4"]
 border_width_left = 14

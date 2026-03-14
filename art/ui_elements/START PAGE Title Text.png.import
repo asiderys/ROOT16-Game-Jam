@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7lfiyixgea4l"
-path="res://.godot/imported/PinkAlien1.png-9914ebd34e93bb94e9fe7cde6be1138c.ctex"
+uid="uid://i0fcu4bs5gy1"
+path="res://.godot/imported/START PAGE Title Text.png-4803080d0d26f7a3c22fd99728030f27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PinkAlien1.png"
-dest_files=["res://.godot/imported/PinkAlien1.png-9914ebd34e93bb94e9fe7cde6be1138c.ctex"]
+source_file="res://art/ui_elements/START PAGE Title Text.png"
+dest_files=["res://.godot/imported/START PAGE Title Text.png-4803080d0d26f7a3c22fd99728030f27.ctex"]
 
 [params]
 
