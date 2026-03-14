@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buw0m46g06o8b"
-path="res://.godot/imported/START PAGE Background (1).jpg-d0ee9c5c324d226dc203e976ec096be3.ctex"
+uid="uid://i0fcu4bs5gy1"
+path="res://.godot/imported/START PAGE Title Text.png-8170d3df76b772819415fe784ca39316.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://START PAGE Background (1).jpg"
-dest_files=["res://.godot/imported/START PAGE Background (1).jpg-d0ee9c5c324d226dc203e976ec096be3.ctex"]
+source_file="res://start-screen/START PAGE Title Text.png"
+dest_files=["res://.godot/imported/START PAGE Title Text.png-8170d3df76b772819415fe784ca39316.ctex"]
 
 [params]
 

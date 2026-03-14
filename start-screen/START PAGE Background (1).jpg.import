@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qubon4b06i8v"
-path="res://.godot/imported/START PAGE Play Button.png-bfadafd073bd928b8fadcfd2d19e4564.ctex"
+uid="uid://buw0m46g06o8b"
+path="res://.godot/imported/START PAGE Background (1).jpg-201960bb0ac547af6ec4018387dde18c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://START PAGE Play Button.png"
-dest_files=["res://.godot/imported/START PAGE Play Button.png-bfadafd073bd928b8fadcfd2d19e4564.ctex"]
+source_file="res://start-screen/START PAGE Background (1).jpg"
+dest_files=["res://.godot/imported/START PAGE Background (1).jpg-201960bb0ac547af6ec4018387dde18c.ctex"]
 
 [params]
 
