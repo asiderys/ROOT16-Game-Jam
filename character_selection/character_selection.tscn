@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bvfeguayyunjg" path="res://character_selection/guide.gd" id="4_etmm7"]
 [ext_resource type="SpriteFrames" uid="uid://damlu10ku3ce" path="res://art/aliens/blorpl/blorpl_frames.tres" id="5_etmm7"]
 [ext_resource type="SpriteFrames" uid="uid://ctwie4j1g058m" path="res://art/aliens/strange_steve/strange_steve_frames.tres" id="7_0lje1"]
+[ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="7_ftqaf"]
 [ext_resource type="PackedScene" uid="uid://8qay6q5iwyxt" path="res://alien_voice/alien_voice.tscn" id="7_odr2s"]
 
 [node name="CharacterSelection" type="Control" unique_id=93252415]
@@ -142,6 +143,9 @@ text = "<"
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 text = ">"
+
+[node name="CharacterSelectionMusic" type="AudioStreamPlayer2D" parent="." unique_id=267830055]
+stream = ExtResource("7_ftqaf")
 
 [connection signal="pressed" from="ChangeSprite/Prev" to="." method="prev_sprite"]
 [connection signal="pressed" from="ChangeSprite/Next" to="." method="next_sprite"]

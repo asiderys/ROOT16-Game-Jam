@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c7lfiyixgea4l" path="res://art/aliens/blorpl/borpl02.png" id="3_bl24s"]
 [ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="3_v82cg"]
 [ext_resource type="Script" uid="uid://bvxpr60r2vho" path="res://alien_voice/alien_voice.gd" id="5_u4yv4"]
+[ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="7_1ox3v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4yv4"]
 border_width_left = 14
@@ -174,5 +175,10 @@ theme_override_font_sizes/font_size = 20
 text = "(Click for next)"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CutsceneMusic" type="AudioStreamPlayer2D" parent="." unique_id=1448370862]
+stream = ExtResource("7_1ox3v")
+volume_db = 6.804
+parameters/looping = true
 
 [connection signal="pressed" from="NextBtn" to="." method="next_slide"]

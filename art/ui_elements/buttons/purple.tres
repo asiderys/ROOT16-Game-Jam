@@ -1,5 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://b0v6fmwcig6rw"]
 
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="1_7y1k4"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c1j47"]
 bg_color = Color(0.38487077, 0.6247515, 0.82767326, 1)
 
@@ -25,6 +27,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [resource]
+default_font = ExtResource("1_7y1k4")
 /styles/Default = SubResource("StyleBoxFlat_c1j47")
 Button/styles/hover = SubResource("StyleBoxFlat_70l83")
 Button/styles/normal = SubResource("StyleBoxFlat_gf6fb")

@@ -12,6 +12,8 @@ var aliens = [
 ]
 var current_alien = 0
 func _ready() -> void:
+	$CharacterSelectionMusic.seek(global.music_pos)
+	$CharacterSelectionMusic.play()
 	$SelectedVBox/SelectedHBox/Selected.sprite_frames = load("res://art/aliens/" + aliens[current_alien] + "/" + aliens[current_alien] + "_frames.tres")
 	$SelectedVBox/SelectedHBox/Selected.play()
 func next_sprite():

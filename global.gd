@@ -14,6 +14,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+var music_pos = 0
 var buckets_data = {
 	1: {
 		"name":"Zorp 1",
