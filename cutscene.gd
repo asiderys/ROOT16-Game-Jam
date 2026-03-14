@@ -19,13 +19,13 @@ func _ready() -> void:
 	$AnimationPlayer/Guide.position.x =  x_size  - 150
 	$AnimationPlayer/Guide.position.y = get_viewport().get_visible_rect().size.y
 	$SpeachBubble/InfoLbl.text = ""
+	$AnimationPlayer/Guide.play()
 
 func next_slide() -> void:
 	if clickable == false:
 		return
 	clickable = false
-	if (cur_slide - 1) % walk_time == 0:
-		$AnimationPlayer/Guide.play()
+	if (cur_slide + 2) % walk_time == 0:
 		if guide_pos == side.RIGHT:
 			$AnimationPlayer.play("WalkLeft")
 			guide_pos = side.LEFT
@@ -33,7 +33,7 @@ func next_slide() -> void:
 			$AnimationPlayer.play("WalkRight")
 			guide_pos = side.RIGHT
 		await $AnimationPlayer.animation_finished
-		$AnimationPlayer/Guide.pause()
+
 	cur_slide += 1
 	$SpeachBubble/InfoLbl.text = ""
 	$AlienVoice.speak(slides[cur_slide])

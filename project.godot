@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="ROOT16"
+run/main_scene="uid://dtxngu4u3aui3"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+global="*uid://chhpjy5m4c1s4"
+
+[display]
+
+window/size/mode=4
 
 [physics]
 
