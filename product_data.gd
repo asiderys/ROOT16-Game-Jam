@@ -5,3 +5,4 @@ extends Resource
 @export var cost = -4
 @export var sell_price = 4
 @export var trust_value = 16
+@export var id = 0

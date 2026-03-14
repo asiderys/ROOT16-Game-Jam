@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dtxngu4u3aui3"]
 
 [ext_resource type="Texture2D" uid="uid://fo27rpgrtwec" path="res://icon.svg" id="1_t13al"]
-[ext_resource type="Script" uid="uid://d2sgm1uley0o3" path="res://product_card.gd" id="1_y2gr7"]
+[ext_resource type="Script" path="res://product_card.gd" id="1_y2gr7"]
 
 [node name="ProductCard" type="Control" unique_id=1393804491]
 custom_minimum_size = Vector2(507, 647)

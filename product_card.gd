@@ -17,7 +17,10 @@ func set_up_vals(data: product_data):
 	$ProfitCount.text = str(data.sell_price)
 
 func decrease_purchase_amount() -> void:
-	amount_purchase = clamp(amount_purchase - 1, 0,INF)
+	if amount_purchase > 0:
+		amount_purchase = amount_purchase - 1
+		get_node("../../../..").update_total_cost(self_data.cost * -1)
 
 func increase_purchase_amount() -> void:
-	amount_purchase = clamp(amount_purchase + 1, 0,INF)
+	amount_purchase = amount_purchase + 1
+	get_node("../../../..").update_total_cost(self_data.cost)
