@@ -10,24 +10,15 @@ var inputs = {"ui_right": Vector2.RIGHT,
 
 @onready var ray = $RayCast2D
 @onready var anim = $AnimatedSprite2D
+@export var speed = 300
+
+const EMPTY_BIN = preload("res://store-layout/empty_bin.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	position = position.snapped(Vector2.ONE * tileSize)
 	position += Vector2.ONE * tileSize/2
-
-#func _unhandled_input(event: InputEvent) -> void:
-	#for dir in inputs.keys():
-		#if event.is_action_pressed(dir):
-			#move(dir)
-#func move(dir):
-	#var target = inputs[dir] * tileSize
-	#anim.play('move_anim')
-	#if not test_move(global_transform, target):
-		#position += target
-
-@export var speed = 300
-
+	
 func get_input() -> Vector2:
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = input_direction * speed

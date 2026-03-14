@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://beg4c82odsfjx"]
 
 [ext_resource type="PackedScene" uid="uid://ci3hv60ioh843" path="res://store-layout/store_background.tscn" id="1_2dbit"]
+[ext_resource type="Script" uid="uid://3ktuorcdujhg" path="res://store-layout/day_store.gd" id="1_ipnrw"]
 [ext_resource type="Script" uid="uid://bk6ar2qhfyoco" path="res://store-layout/TileMovement.gd" id="1_p4ya5"]
 [ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/Blorpl 1.png" id="3_2dbit"]
 [ext_resource type="Texture2D" uid="uid://byvrdtmtw5qcr" path="res://store-layout/FRONT CASHIER REGISTER.png" id="3_i5ce1"]
@@ -24,11 +25,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dbit"]
-size = Vector2(233, 45)
+size = Vector2(306, 45)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eucd7"]
-a = Vector2(1150, 181)
-b = Vector2(-3, 181)
+a = Vector2(1151, 198)
+b = Vector2(0, 198)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ipnrw"]
 a = Vector2(0, 648)
@@ -42,35 +43,51 @@ b = Vector2(1152, 650)
 b = Vector2(0, 650)
 
 [node name="Node2D" type="Node2D" unique_id=555568952]
+y_sort_enabled = true
+script = ExtResource("1_ipnrw")
+
+[node name="YellowMarker" type="Marker2D" parent="." unique_id=1132510193]
+position = Vector2(789, 477)
+
+[node name="OrangeMarker" type="Marker2D" parent="." unique_id=760816094]
+y_sort_enabled = true
+position = Vector2(951, 477)
+
+[node name="PinkMarker" type="Marker2D" parent="." unique_id=890674798]
+y_sort_enabled = true
+position = Vector2(789, 327)
+
+[node name="GreenMarker" type="Marker2D" parent="." unique_id=652043070]
+position = Vector2(951, 327)
 
 [node name="Background" parent="." unique_id=2065809239 instance=ExtResource("1_2dbit")]
+z_index = -1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2045894891]
+y_sort_enabled = true
 script = ExtResource("1_p4ya5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=74512500]
-position = Vector2(396, 509)
+position = Vector2(204, 485)
 shape = SubResource("CircleShape2D_2dbit")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=68956338]
-position = Vector2(398.00003, 503.00003)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1378890808]
+y_sort_enabled = true
+position = Vector2(204.8697, 505.85135)
 scale = Vector2(0.101851806, 0.101851806)
 sprite_frames = SubResource("SpriteFrames_ipnrw")
 animation = &"move_anim"
+offset = Vector2(0, -400)
 
 [node name="Register" type="Node2D" parent="." unique_id=1770918848]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Register" unique_id=1421475735]
+y_sort_enabled = true
 position = Vector2(1, 184)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Register/StaticBody2D" unique_id=448227590]
-position = Vector2(163.5, 168.5)
+position = Vector2(174, 164)
 shape = SubResource("RectangleShape2D_2dbit")
-
-[node name="Sprite2D" type="Sprite2D" parent="Register/StaticBody2D" unique_id=1665357388]
-position = Vector2(161.99994, 104)
-scale = Vector2(0.22976188, 0.2297619)
-texture = ExtResource("3_i5ce1")
 
 [node name="Walls" type="Node2D" parent="." unique_id=273816452]
 
@@ -87,3 +104,10 @@ shape = SubResource("SegmentShape2D_urqch")
 
 [node name="west_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=864987462]
 shape = SubResource("SegmentShape2D_c0k3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1168872560]
+y_sort_enabled = true
+position = Vector2(180, 361.00003)
+scale = Vector2(0.29559526, 0.23511901)
+texture = ExtResource("3_i5ce1")
+offset = Vector2(0, -300)
