@@ -24,20 +24,23 @@ texture = ExtResource("1_0p0vs")
 expand_mode = 3
 
 [node name="SelectLbl" type="Label" parent="." unique_id=2036187707]
-layout_mode = 0
-offset_left = 394.0
-offset_top = 97.0
-offset_right = 787.0
-offset_bottom = 160.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 118.0
+offset_bottom = 181.0
+grow_horizontal = 2
 theme_override_font_sizes/font_size = 45
 text = "Select a Character"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CharacterBox" type="HBoxContainer" parent="." unique_id=1984510769]
 layout_mode = 0
 offset_left = 217.0
-offset_top = 190.0
+offset_top = 154.0
 offset_right = 930.0
-offset_bottom = 502.0
+offset_bottom = 466.0
 
 [node name="TextureButton" type="TextureButton" parent="CharacterBox" unique_id=1524743820]
 layout_mode = 2
@@ -64,3 +67,12 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 texture_normal = ExtResource("2_g8q2a")
+
+[node name="Button" type="Button" parent="." unique_id=1253770905]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 445.0
+offset_right = 668.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 25
+text = "Continue"
