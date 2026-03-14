@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://djg2fyic5t3ck"]
+
+[ext_resource type="Texture2D" uid="uid://cwba0tm3vbqg5" path="res://art/aliens/SPHEEP/SPHEEP 1.png" id="1_x8jvi"]
+[ext_resource type="Texture2D" uid="uid://ciuqgfnm464tc" path="res://art/aliens/SPHEEP/SPHEEP 2.png" id="2_1ca42"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x8jvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1ca42")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
