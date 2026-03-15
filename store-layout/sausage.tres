@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://qjf0gxlg2cjb"]
+
+[ext_resource type="Texture2D" uid="uid://o5chgbmi783e" path="res://aliens/Sausage 1.png" id="1_fhnwm"]
+[ext_resource type="Texture2D" uid="uid://rc6l6v2gihjs" path="res://aliens/Sausage 2.png" id="2_cgap4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_fhnwm")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_cgap4")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}]

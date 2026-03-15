@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbolvqqn2ufuy"
-path="res://.godot/imported/Orb 2.png-54930c86af679851176a4a54ea093685.ctex"
+uid="uid://ca3b66iy7lh4j"
+path="res://.godot/imported/Bello Jello 1.png-191ccc4a91ee50c2484676ceef3204a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Orb 2.png"
-dest_files=["res://.godot/imported/Orb 2.png-54930c86af679851176a4a54ea093685.ctex"]
+source_file="res://aliens/Bello Jello 1.png"
+dest_files=["res://.godot/imported/Bello Jello 1.png-191ccc4a91ee50c2484676ceef3204a2.ctex"]
 
 [params]
 

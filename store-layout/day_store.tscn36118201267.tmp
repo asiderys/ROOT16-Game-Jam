@@ -123,7 +123,7 @@ y_sort_enabled = true
 curve = SubResource("Curve2D_ipnrw")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1630540402]
-position = Vector2(263.08185, 417.25375)
+position = Vector2(762.42694, 397.72635)
 rotation = -0.42892215
-progress = 1100.0
+progress = 600.0
 rotates = false
