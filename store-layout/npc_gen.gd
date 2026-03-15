@@ -7,10 +7,28 @@ var hasWaited = [true, true]
 var isWaiting = false
 var bubble = 0
 
+var dialogueBox
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var npc = get_child(0)
 	bubble = npc.get_node("CharacterBody2D/ThoughtBubble")
+	
+	#var body = npc.get_node("CharacterBody2D")
+	#body.input_pickable = true
+	#body.input_event.connect(_on_input_event)
+
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print("Clicked")
+		print(dialogueBox)
+		if dialogueBox:
+			print("DialogueBox")
+			dialogueBox.visible = !dialogueBox.visible
+			if dialogueBox.visible:
+				print("Dialog box called")
+				dialogueBox.updateDialogue()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
