@@ -1,9 +1,10 @@
 extends Node
 
-
+var day = 1
 var store_stock = {}
+var trust_vals = {}
 var money = 100
-
+var maxProductTrust = 0
 var player_sprite = null
 
 # Called when the node enters the scene tree for the first time.

@@ -18,6 +18,7 @@ const EMPTY_BIN = preload("res://store-layout/empty_bin.tscn")
 func _ready() -> void:
 	position = position.snapped(Vector2.ONE * tileSize)
 	position += Vector2.ONE * tileSize/2
+	$AnimatedSprite2D.sprite_frames = load("res://art/aliens/" + global.player_sprite + "/" + global.player_sprite + "_frames.tres")
 	
 func get_input() -> Vector2:
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -27,7 +28,7 @@ func get_input() -> Vector2:
 func _physics_process(delta):
 	var input_direction = get_input()
 	if input_direction != Vector2.ZERO:
-		anim.play('move_anim')
+		anim.play()
 	move_and_slide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

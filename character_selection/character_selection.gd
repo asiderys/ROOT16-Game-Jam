@@ -34,6 +34,7 @@ func change_sprite():
 	else:
 		$SelectedVBox/SelectedHBox/Selected.scale = Vector2(0.218, 0.218)
 func _on_continue_btn_pressed() -> void:
+	global.player_sprite = aliens[current_alien]
 	$ChooseCharacter.play()
 	await $ChooseCharacter.finished
 	global.music_pos = $CharacterSelectionMusic.get_playback_position()

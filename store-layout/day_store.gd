@@ -87,28 +87,22 @@ func spawn_bins():
 
 	var bin_scenes = {"Yellow": YELLOW, "Orange": ORANGE, "Pink": PINK, "Green": GREEN}
 	var pos_index = 0
-	var start_pos = Vector2(1113,327)
+	var start_pos = Vector2(1113*1.66,327*1.66)
 	var cur_pos = start_pos
-	var diff = Vector2(-162, 150)
-	for bin in testDict:
+	var diff = Vector2(-162*1.66, 150*1.66)
+	for item in global.store_stock.keys():
+		var bin = null
+		#if(global.store_stock[item] == 0):
+			#bin = "empty"
 		var binInstance = 0
-		var test_data = product_data.new()
-		test_data.cost = (randi() % 10) * 1
-		test_data.item_name = bin
-		test_data.sell_price = randi() % 20
-		test_data.trust_value = randi() % 5
-		test_data.store_name = "Store #" + str(randi() % 3)
-		test_data.id = "zorp123"
-		test_data.texture = bin
-		test_data.description = "dsfjdskflkdjfljdsflkjdslkf"
 		binInstance = BUCKET_SCENE.instantiate()
-		binInstance.change_type(test_data)
+		binInstance.change_type(item)
 		#var marker = get_node(bin + "Marker") # wacky string manipulation, messy but works ig?
-		if pos_index < (len(testDict) / 2):
+		if pos_index < (len(global.store_stock) / 2):
 			cur_pos.x = (diff.x * (pos_index + 1)) + start_pos.x
 			binInstance.position = cur_pos
 		else:
-			cur_pos.x = (diff.x * (pos_index - (len(testDict)/2) + 1)) + start_pos.x
+			cur_pos.x = (diff.x * (pos_index - (len(global.store_stock)/2) + 1)) + start_pos.x
 			cur_pos.y = start_pos.y + diff.y
 			binInstance.position = cur_pos
 		pos_index += 1
@@ -117,3 +111,11 @@ func spawn_bins():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_timer_timeout() -> void:
+	if global.day < 3:
+		global.day += 1
+		get_tree().change_scene_to_file("res://restocking/Restocking.tscn")
+	else:
+		get_tree().change_scene_to_file("res://endings/endings.tscn")

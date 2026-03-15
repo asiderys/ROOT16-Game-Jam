@@ -3,7 +3,10 @@ extends Node2D
 var bucket_data = null
 func change_type(data: product_data):
 	bucket_data = data
-	$StaticBody2D/Sprite2D.texture = load("res://art/buckets/" + data.texture + "_bucket.png")
+	if global.store_stock[data] == 0:
+		$StaticBody2D/Sprite2D.texture = load("res://art/buckets/empty_bucket.png")
+	else :
+		$StaticBody2D/Sprite2D.texture = load("res://art/buckets/" + data.texture + "_bucket.png")
 	$ToolTip/Box/NameLbl.text = bucket_data.item_name
 	$ToolTip/Box/SellPriceLbl.text = "Sell price: " + str(bucket_data.sell_price) + " $tars"
 	$ToolTip/Box/DescrLbl.text = bucket_data.description

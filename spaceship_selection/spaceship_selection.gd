@@ -17,5 +17,6 @@ func prev_sprite():
 
 func _on_continue_btn_pressed() -> void:
 	$SpaceshipSelect.play()
+	$ContinueContainer/ContinueBtn.visible = false
 	await $SpaceshipSelect.finished
-	# TODO: CHANGE SCENE
+	get_tree().change_scene_to_file("res://restocking/Restocking.tscn")

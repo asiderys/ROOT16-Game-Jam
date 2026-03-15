@@ -15,7 +15,7 @@ func set_up_vals(data: product_data):
 	$CoinsCount.text = str(data.cost)
 	$TrustCount.text = str(data.trust_value)
 	$ProfitCount.text = str(data.sell_price)
-	$ItemIcon.texture = load("res://art/buckets/" + str(data.texture) + ".png")
+	$ItemIcon.texture = load("res://art/buckets/" + str(data.texture) + "_bucket.png")
 
 func decrease_purchase_amount() -> void:
 	$Decrement.play()
