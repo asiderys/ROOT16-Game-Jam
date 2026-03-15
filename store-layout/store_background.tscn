@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ci3hv60ioh843"]
+
+[ext_resource type="Texture2D" uid="uid://btt38mbgjxkp0" path="res://store-layout/images/Store Background.png" id="1_hp8yw"]
+
+[sub_resource type="TileSet" id="TileSet_hp8yw"]
+
+[node name="Node2D" type="Node2D" unique_id=2065809239]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=606107732]
+tile_set = SubResource("TileSet_hp8yw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70584380]
+z_index = -1
+position = Vector2(578.4446, 324)
+scale = Vector2(0.34074074, 0.34074074)
+texture = ExtResource("1_hp8yw")

@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://o6vnr8c72d6q"]
+
+[ext_resource type="Texture2D" uid="uid://dp0wbt8mn86gd" path="res://aliens/Blorpl 1.png" id="1_qke3s"]
+[ext_resource type="Texture2D" uid="uid://cfbn5di6orqp5" path="res://aliens/Blorpl 2.png" id="2_1t4q4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_qke3s")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_1t4q4")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}]

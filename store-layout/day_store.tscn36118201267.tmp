@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://beg4c82odsfjx"]
+
+[ext_resource type="PackedScene" uid="uid://ci3hv60ioh843" path="res://store-layout/store_background.tscn" id="1_2dbit"]
+[ext_resource type="Script" uid="uid://3ktuorcdujhg" path="res://store-layout/day_store.gd" id="1_ipnrw"]
+[ext_resource type="Script" uid="uid://bk6ar2qhfyoco" path="res://store-layout/TileMovement.gd" id="1_p4ya5"]
+[ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/Blorpl 1.png" id="3_2dbit"]
+[ext_resource type="Texture2D" uid="uid://byvrdtmtw5qcr" path="res://store-layout/FRONT CASHIER REGISTER.png" id="3_i5ce1"]
+[ext_resource type="Texture2D" uid="uid://djhe50owpgrn4" path="res://store-layout/Blorpl 2.png" id="4_eucd7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2dbit"]
+radius = 56.008926
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ipnrw"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("3_2dbit")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_eucd7")
+}],
+"loop": false,
+"name": &"move_anim",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dbit"]
+size = Vector2(306, 45)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eucd7"]
+a = Vector2(1151, 198)
+b = Vector2(0, 198)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ipnrw"]
+a = Vector2(0, 648)
+b = Vector2(1152, 648)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_urqch"]
+a = Vector2(1152, -1)
+b = Vector2(1152, 650)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c0k3n"]
+b = Vector2(0, 650)
+
+[sub_resource type="Curve2D" id="Curve2D_ipnrw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 907, 596, 0, 0, 0, 0, 1071, 521, 0, 0, 0, 0, 1068, 407, 0, 0, 0, 0, 781, 397, 0, 0, 0, 0, 244, 418, 0, 0, 0, 0, 227, 609)
+}
+point_count = 6
+
+[node name="Node2D" type="Node2D" unique_id=555568952]
+y_sort_enabled = true
+script = ExtResource("1_ipnrw")
+
+[node name="YellowMarker" type="Marker2D" parent="." unique_id=1132510193]
+position = Vector2(789, 477)
+
+[node name="OrangeMarker" type="Marker2D" parent="." unique_id=760816094]
+y_sort_enabled = true
+position = Vector2(951, 477)
+
+[node name="PinkMarker" type="Marker2D" parent="." unique_id=890674798]
+y_sort_enabled = true
+position = Vector2(789, 327)
+
+[node name="GreenMarker" type="Marker2D" parent="." unique_id=652043070]
+position = Vector2(951, 327)
+
+[node name="Background" parent="." unique_id=2065809239 instance=ExtResource("1_2dbit")]
+z_index = -1
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2045894891]
+y_sort_enabled = true
+script = ExtResource("1_p4ya5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=74512500]
+position = Vector2(204, 485)
+shape = SubResource("CircleShape2D_2dbit")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1378890808]
+y_sort_enabled = true
+position = Vector2(204.8697, 505.85135)
+scale = Vector2(0.101851806, 0.101851806)
+sprite_frames = SubResource("SpriteFrames_ipnrw")
+animation = &"move_anim"
+offset = Vector2(0, -400)
+
+[node name="Register" type="Node2D" parent="." unique_id=1770918848]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Register" unique_id=1421475735]
+y_sort_enabled = true
+position = Vector2(1, 184)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Register/StaticBody2D" unique_id=448227590]
+position = Vector2(174, 164)
+shape = SubResource("RectangleShape2D_2dbit")
+
+[node name="Walls" type="Node2D" parent="." unique_id=273816452]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Walls" unique_id=2136517970]
+
+[node name="north_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=946342620]
+shape = SubResource("SegmentShape2D_eucd7")
+
+[node name="south_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=976555020]
+shape = SubResource("SegmentShape2D_ipnrw")
+
+[node name="east_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1515999969]
+shape = SubResource("SegmentShape2D_urqch")
+
+[node name="west_wall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=864987462]
+shape = SubResource("SegmentShape2D_c0k3n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1168872560]
+y_sort_enabled = true
+position = Vector2(180, 361.00003)
+scale = Vector2(0.29559526, 0.23511901)
+texture = ExtResource("3_i5ce1")
+offset = Vector2(0, -300)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1119737323]
+y_sort_enabled = true
+curve = SubResource("Curve2D_ipnrw")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1630540402]
+position = Vector2(762.42694, 397.72635)
+rotation = -0.42892215
+progress = 600.0
+rotates = false

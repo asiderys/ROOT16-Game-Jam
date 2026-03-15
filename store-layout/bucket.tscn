@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://b56bb4ignafi5"]
+
+[ext_resource type="Script" uid="uid://ds0w7rumi3std" path="res://store-layout/bucket.gd" id="1_rlkri"]
+[ext_resource type="Texture2D" uid="uid://cidjb8sqm0n6n" path="res://bins/Pink Bucket.png" id="1_wbpjc"]
+[ext_resource type="Texture2D" uid="uid://di6aynulw6t1" path="res://art/ui_elements/Description Box.png" id="3_o47jv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_buj75"]
+size = Vector2(78, 40)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rlkri"]
+radius = 59.0
+height = 158.0
+
+[node name="Bucket" type="Node2D" unique_id=713389866]
+y_sort_enabled = true
+script = ExtResource("1_rlkri")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=715620631]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=974811696]
+y_sort_enabled = true
+scale = Vector2(0.17962962, 0.17962962)
+texture = ExtResource("1_wbpjc")
+offset = Vector2(0, -400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1562730420]
+position = Vector2(-1, -70)
+shape = SubResource("RectangleShape2D_buj75")
+
+[node name="MouseArea" type="Area2D" parent="." unique_id=83824295]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea" unique_id=1190659429]
+position = Vector2(-1, -68)
+shape = SubResource("CapsuleShape2D_rlkri")
+
+[node name="ToolTip" type="Node2D" parent="." unique_id=778577661]
+visible = false
+z_index = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="ToolTip" unique_id=258349839]
+position = Vector2(-4, -243)
+scale = Vector2(0.22222222, 0.10694444)
+texture = ExtResource("3_o47jv")
+
+[node name="Box" type="VBoxContainer" parent="ToolTip" unique_id=949396206]
+offset_left = -129.0
+offset_top = -306.0
+offset_right = 122.0
+offset_bottom = -191.0
+
+[node name="NameLbl" type="Label" parent="ToolTip/Box" unique_id=939125676]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "NAME"
+horizontal_alignment = 1
+
+[node name="SellPriceLbl" type="Label" parent="ToolTip/Box" unique_id=1935525752]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Sell price"
+horizontal_alignment = 1
+
+[node name="DescrLbl" type="Label" parent="ToolTip/Box" unique_id=940358622]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Description"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="MouseArea" to="." method="_on_mouse_area_mouse_entered"]
+[connection signal="mouse_exited" from="MouseArea" to="." method="_on_mouse_area_mouse_exited"]

@@ -7,3 +7,4 @@ extends Resource
 @export var trust_value = 16
 @export var id = 0
 @export var texture = ""
+@export var description = ""

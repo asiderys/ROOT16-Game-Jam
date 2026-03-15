@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cxfu43dn10q6n"]
+
+[ext_resource type="Texture2D" uid="uid://cidjb8sqm0n6n" path="res://bins/Pink Bucket.png" id="1_hmiwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_buj75"]
+size = Vector2(78, 40)
+
+[node name="Node2D" type="Node2D" unique_id=713389866]
+y_sort_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=715620631]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=974811696]
+y_sort_enabled = true
+scale = Vector2(0.17962962, 0.17962962)
+texture = ExtResource("1_hmiwl")
+offset = Vector2(0, -400)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1562730420]
+position = Vector2(-1, -70)
+shape = SubResource("RectangleShape2D_buj75")

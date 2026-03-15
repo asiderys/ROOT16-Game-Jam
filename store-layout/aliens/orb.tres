@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://rcnlj2afwwwi"]
+
+[ext_resource type="Texture2D" uid="uid://4yiwgun0f1im" path="res://aliens/Orb 1.png" id="1_rjy0i"]
+[ext_resource type="Texture2D" uid="uid://dbolvqqn2ufuy" path="res://aliens/Orb 2.png" id="2_h1ddg"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_rjy0i")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_h1ddg")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}]

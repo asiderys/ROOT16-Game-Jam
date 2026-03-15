@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b38rfykmtqo50"]
+
+[ext_resource type="Texture2D" uid="uid://bwcgyto86eaff" path="res://aliens/GOOMI & GAMI 1.png" id="1_j3a3a"]
+[ext_resource type="Texture2D" uid="uid://cctoye21b61t4" path="res://aliens/GOOMI & GAMI 2.png" id="2_6ko8d"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("1_j3a3a")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_6ko8d")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}]
