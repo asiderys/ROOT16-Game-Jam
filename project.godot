@@ -17,8 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-global="*uid://bm8t3vt1tan8f"
-Global="*uid://bm8t3vt1tan8f"
+global="*uid://chhpjy5m4c1s4"
 
 [display]
 

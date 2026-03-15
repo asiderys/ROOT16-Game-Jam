@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dnx618rg2fvb"]
+
+[ext_resource type="Texture2D" uid="uid://dl3airgwaewbm" path="res://art/aliens/kiwi/kiwi 1.png" id="1_y467n"]
+[ext_resource type="Texture2D" uid="uid://b1pqnkgv3or8e" path="res://art/aliens/kiwi/kiwi 2.png" id="2_irlro"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y467n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_irlro")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

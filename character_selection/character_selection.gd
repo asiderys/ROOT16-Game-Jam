@@ -1,14 +1,15 @@
 extends Control
 
 var aliens = [
+	"orb",
 	"blorpl",
 	"bello_jello",
 	"goomi_gami",
-	"orb",
 	"PT",
 	"sausage",
 	"SPHEEP",
-	"strange_steve"
+	"strange_steve",
+	"kiwi"
 ]
 var current_alien = 0
 func _ready() -> void:
