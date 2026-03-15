@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dncj3afafn3b3" path="res://art/spaceship_full.png" id="8_bc2ty"]
 [ext_resource type="Texture2D" uid="uid://dnno5xamqbjeh" path="res://art/spaceship_no_windows.png" id="9_gf8nu"]
 [ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="9_vs1fp"]
+[ext_resource type="AudioStream" uid="uid://ckesvsida68" path="res://sound_effects/spaceship.wav" id="11_ihpah"]
+[ext_resource type="AudioStream" uid="uid://bmljm1vluko8g" path="res://sound_effects/defaultbutton.wav" id="12_ihpah"]
 
 [node name="SpaceshipSelection" type="Control" unique_id=93252415]
 layout_mode = 3
@@ -166,5 +168,13 @@ stream = ExtResource("9_vs1fp")
 autoplay = true
 parameters/looping = true
 
+[node name="SpaceshipSelect" type="AudioStreamPlayer2D" parent="." unique_id=2144929171]
+stream = ExtResource("11_ihpah")
+volume_db = -15.2
+
+[node name="DefaultButton" type="AudioStreamPlayer2D" parent="." unique_id=276680146]
+stream = ExtResource("12_ihpah")
+
+[connection signal="pressed" from="ContinueContainer/ContinueBtn" to="." method="_on_continue_btn_pressed"]
 [connection signal="pressed" from="ChangeSprite/Prev" to="." method="prev_sprite"]
 [connection signal="pressed" from="ChangeSprite/Next" to="." method="next_sprite"]

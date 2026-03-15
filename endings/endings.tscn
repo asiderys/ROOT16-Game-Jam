@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cr5icgkhbtrdx"]
 
 [ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_1uqj3"]
-[ext_resource type="Script" uid="uid://ct1jg1c6fnv7y" path="res://endings.gd" id="1_7ilvu"]
+[ext_resource type="Script" uid="uid://ct1jg1c6fnv7y" path="res://endings/endings.gd" id="1_7ilvu"]
 [ext_resource type="SpriteFrames" uid="uid://cep1o2qlldjk4" path="res://art/aliens/goomi_gami/goomi_gami_frames.tres" id="2_7ilvu"]
 [ext_resource type="SpriteFrames" uid="uid://fa0ygf7kd8x7" path="res://art/aliens/PT/PT_frames.tres" id="5_00nh0"]
 [ext_resource type="SpriteFrames" uid="uid://ctwie4j1g058m" path="res://art/aliens/strange_steve/strange_steve_frames.tres" id="5_ilihb"]
