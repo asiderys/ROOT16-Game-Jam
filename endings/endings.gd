@@ -15,18 +15,23 @@ var soundfx = [
 	"res://sound_effects/neutralending.mp3",
 	"res://sound_effects/badending.mp3"
 ]
-var good_profits = 5000
+var good_profits = 700
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	var ending = outcomes.GOOD
+	var ending
+	if (global.trust > 60) and (global.money > good_profits):
+		ending = outcomes.GOOD
+	elif (global.trust <= 60) and (global.trust >= 40):
+		ending = outcomes.NEUTRAL
+	else:
+		ending = outcomes.BAD
 	
 	$GoomiGami.play()
 	$PT.play()
 	$sausage.play()
 	$StrangeSteve.play()
 	$SimpleStats/TrustLbl.text = "Total trust: " + str(global.trust)
-	$SimpleStats/ProfitsLbl.text = "Total profits: " + str(global.profits)
+	$SimpleStats/ProfitsLbl.text = "Total profits: " + str(global.money)
 	var final_path = ""
 	if ending == outcomes.GOOD:
 		final_path = " 1"
@@ -60,7 +65,7 @@ func _ready() -> void:
 		$LogoAnimator.play("logo")
 	elif (ending == outcomes.NEUTRAL):
 		var neutralMsg = ""
-		if (global.trust > 60) and (global.profits > good_profits):
+		if (global.trust > 60) and (global.money > good_profits):
 			neutralMsg = ["Good job. You finished with a trust meter of " + str(global.trust) + " and positive profits.",
 				"You kept the store going with smart business decisions and did a decent job of developing customer relations. "
 			]

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://4bnicmn313su" path="res://start_screen/start_screen.gd" id="1_w8rx1"]
 [ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="2_o2g4g"]
-[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://art/ui_elements/START PAGE Title Text.png" id="2_w8rx1"]
-[ext_resource type="Texture2D" uid="uid://qubon4b06i8v" path="res://art/ui_elements/START PAGE Play Button.png" id="3_gxmh3"]
+[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://start-screen/START PAGE Title Text.png" id="2_w8rx1"]
+[ext_resource type="Texture2D" uid="uid://qubon4b06i8v" path="res://start-screen/START PAGE Play Button.png" id="3_gxmh3"]
 [ext_resource type="AudioStream" uid="uid://bf5f1lcjsgx47" path="res://music/titlemusic.mp3" id="5_o6flq"]
 [ext_resource type="AudioStream" uid="uid://bjsj7ihnllnio" path="res://sound_effects/startupsound.wav" id="6_2nguo"]
 

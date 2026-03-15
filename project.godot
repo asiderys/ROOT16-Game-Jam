@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ROOT16"
-run/main_scene="uid://beg4c82odsfjx"
+run/main_scene="uid://3bbqamc6efey"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://wer4imkkv2fv"
 

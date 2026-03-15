@@ -25,7 +25,7 @@ func updateDialogue():
 
 	if randNum > 7:
 		dialogueBox.text = dialogueOptions["positive"].pick_random()
-		global.trust += 5
+		global.trust += 10
 	else:
 		dialogueBox.text = dialogueOptions["negative"].pick_random()
 		global.trust_vals[randItem.id] += 5
