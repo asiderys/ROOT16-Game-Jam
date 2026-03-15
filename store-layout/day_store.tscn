@@ -149,7 +149,7 @@ rotates = false
 z_index = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=904551443]
-wait_time = 11.51
+wait_time = 60.0
 one_shot = true
 autostart = true
 
