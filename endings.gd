@@ -11,7 +11,9 @@ var msgs = [
 	"Your store did not have strong enough connections with the community to create a large impact in this galaxy."
 ]
 var soundfx = [
-	""
+	"res://sound_effects/goodending.mp3",
+	"res://sound_effects/neutralending.mp3",
+	"res://sound_effects/badending.mp3"
 ]
 var good_profits = 5000
 # Called when the node enters the scene tree for the first time.
@@ -35,7 +37,9 @@ func _ready() -> void:
 	for alien in $Dynamic.get_children():
 		print("res://art/aliens/" + alien.name + "/" + alien.name + final_path + ".png")
 		alien.texture = load("res://art/aliens/" + alien.name + "/" + alien.name + final_path + ".png")
+	$SoundEffect.stream = load(soundfx[ending])
 	$SoundEffect.play()
+	$Fade.play("fade_in")
 	await $SoundEffect.finished
 	$Music.play()
 	await get_tree().create_timer(3.5).timeout

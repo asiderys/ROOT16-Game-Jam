@@ -72,6 +72,44 @@ _data = {
 &"logo": SubResource("Animation_hr82h")
 }
 
+[sub_resource type="Animation" id="Animation_mxkwu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gk6lt"]
+resource_name = "fade_in"
+length = 5.0
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_asu1g"]
+_data = {
+&"RESET": SubResource("Animation_mxkwu"),
+&"fade_in": SubResource("Animation_gk6lt")
+}
+
 [node name="Endings" type="Node2D" unique_id=2119706267]
 script = ExtResource("1_7ilvu")
 
@@ -137,7 +175,6 @@ text = "Total Trust: 1000"
 
 [node name="StatsMsg" type="Label" parent="." unique_id=1592956060]
 visible = false
-anchors_preset = -1
 offset_left = 318.0
 offset_top = 184.0
 offset_right = 849.0
@@ -171,3 +208,13 @@ stream = ExtResource("9_00nh0")
 
 [node name="SoundEffect" type="AudioStreamPlayer2D" parent="." unique_id=1071391725]
 stream = ExtResource("10_ypho5")
+
+[node name="Fade" type="AnimationPlayer" parent="." unique_id=702151972]
+libraries/ = SubResource("AnimationLibrary_asu1g")
+
+[node name="ColorRect" type="ColorRect" parent="Fade" unique_id=2112030303]
+offset_left = -34.0
+offset_top = -27.0
+offset_right = 1204.0
+offset_bottom = 681.0
+color = Color(0, 0, 0, 1)
