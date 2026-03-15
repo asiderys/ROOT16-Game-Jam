@@ -1,18 +1,18 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://csqir55v8j72v"]
 
-[ext_resource type="Texture2D" uid="uid://cu05hdta0fbbp" path="res://aliens/PT 1.png" id="1_7sfr8"]
-[ext_resource type="Texture2D" uid="uid://n4jm2xpyf35e" path="res://aliens/PT 2.png" id="2_5moi1"]
+[ext_resource type="Texture2D" uid="uid://cu05hdta0fbbp" path="res://aliens/PT 1.png" id="1_50gdg"]
+[ext_resource type="Texture2D" uid="uid://n4jm2xpyf35e" path="res://aliens/PT 2.png" id="2_dcodp"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 2.0,
-"texture": ExtResource("1_7sfr8")
+"texture": ExtResource("1_50gdg")
 }, {
 "duration": 2.0,
-"texture": ExtResource("2_5moi1")
+"texture": ExtResource("2_dcodp")
 }],
 "loop": true,
-"name": &"default",
+"name": &"moving",
 "speed": 5.0
 }]

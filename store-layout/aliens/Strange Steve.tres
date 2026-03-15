@@ -13,6 +13,6 @@ animations = [{
 "texture": ExtResource("2_yg6vg")
 }],
 "loop": true,
-"name": &"default",
+"name": &"moving",
 "speed": 5.0
 }]
