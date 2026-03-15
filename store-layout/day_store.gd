@@ -52,7 +52,10 @@ func random_npc():
 	pathFollow2D = PathFollow2D.new()
 	pathFollow2D.rotates = false
 	pathFollow2D.set_script(preload("res://store-layout/npc_gen.gd")) 
+	pathFollow2D.dialogueBox = get_node("DialogueBox")
 	var npc = npc_scene.instantiate()
+	npc.get_node("CharacterBody2D").input_pickable = true
+	npc.get_node("CharacterBody2D").input_event.connect(pathFollow2D._on_input_event)
 	
 	var bubble = thoughtBubble.instantiate()
 	bubble.name = "ThoughtBubble"
