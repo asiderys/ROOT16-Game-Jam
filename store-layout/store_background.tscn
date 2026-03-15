@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ci3hv60ioh843"]
 
-[ext_resource type="Texture2D" uid="uid://btt38mbgjxkp0" path="res://store-layout/images/Store Background.png" id="1_hp8yw"]
+[ext_resource type="Texture2D" uid="uid://brxhu3q0r2vmb" path="res://art/backgrounds/NEW STORE BACKGROUND.png" id="1_hp8yw"]
 
 [sub_resource type="TileSet" id="TileSet_hp8yw"]
 
@@ -11,6 +11,6 @@ tile_set = SubResource("TileSet_hp8yw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=70584380]
 z_index = -1
-position = Vector2(578.4446, 324)
-scale = Vector2(0.34074074, 0.34074074)
+position = Vector2(574.7777, 324.5)
+scale = Vector2(0.36752135, 0.36752135)
 texture = ExtResource("1_hp8yw")

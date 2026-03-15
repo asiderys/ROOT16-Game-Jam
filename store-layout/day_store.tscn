@@ -5,12 +5,11 @@
 [ext_resource type="Script" uid="uid://bk6ar2qhfyoco" path="res://store-layout/TileMovement.gd" id="1_p4ya5"]
 [ext_resource type="PackedScene" uid="uid://cxsfnk07p1kbb" path="res://store-layout/dialogue.tscn" id="2_c0k3n"]
 [ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/images/Blorpl 1.png" id="3_2dbit"]
-[ext_resource type="Texture2D" uid="uid://byvrdtmtw5qcr" path="res://store-layout/images/FRONT CASHIER REGISTER.png" id="3_i5ce1"]
 [ext_resource type="Texture2D" uid="uid://djhe50owpgrn4" path="res://store-layout/images/Blorpl 2.png" id="4_eucd7"]
-[ext_resource type="Texture2D" uid="uid://bg8q1d7sn5cgf" path="res://store-layout/images/Employee Worm.png" id="7_urqch"]
+[ext_resource type="Texture2D" uid="uid://kdwhj5efkdll" path="res://art/ui_elements/NEW CASH REGISTER.png" id="6_urqch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2dbit"]
-radius = 56.008926
+radius = 33.37664
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ipnrw"]
 animations = [{
@@ -27,7 +26,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dbit"]
-size = Vector2(306, 45)
+size = Vector2(274, 45)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eucd7"]
 a = Vector2(1151, 198)
@@ -94,7 +93,7 @@ y_sort_enabled = true
 position = Vector2(1, 184)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Register/StaticBody2D" unique_id=448227590]
-position = Vector2(174, 164)
+position = Vector2(213, 168)
 shape = SubResource("RectangleShape2D_2dbit")
 
 [node name="Walls" type="Node2D" parent="." unique_id=273816452]
@@ -115,15 +114,10 @@ shape = SubResource("SegmentShape2D_c0k3n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1168872560]
 y_sort_enabled = true
-position = Vector2(180, 361.00003)
-scale = Vector2(0.29559526, 0.23511901)
-texture = ExtResource("3_i5ce1")
+position = Vector2(208, 328)
+scale = Vector2(0.17264888, 0.1373264)
+texture = ExtResource("6_urqch")
 offset = Vector2(0, -300)
-
-[node name="EmployeeWorm" type="Sprite2D" parent="." unique_id=838666803]
-position = Vector2(166, 220.99998)
-scale = Vector2(0.12197976, 0.09702375)
-texture = ExtResource("7_urqch")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1119737323]
 y_sort_enabled = true

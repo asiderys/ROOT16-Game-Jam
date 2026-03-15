@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck73yqfjwfe28"
-path="res://.godot/imported/Orb 1.png-e75ca930823fa1dca76f89d43da8046e.ctex"
+uid="uid://bdesninhweccm"
+path="res://.godot/imported/STORE NAME SIGN.png-e21dfb6dded1e93ead3bb4ad03d9c5e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/aliens/orb/Orb 1.png"
-dest_files=["res://.godot/imported/Orb 1.png-e75ca930823fa1dca76f89d43da8046e.ctex"]
+source_file="res://art/ui_elements/STORE NAME SIGN.png"
+dest_files=["res://.godot/imported/STORE NAME SIGN.png-e21dfb6dded1e93ead3bb4ad03d9c5e5.ctex"]
 
 [params]
 

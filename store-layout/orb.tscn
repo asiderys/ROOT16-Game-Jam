@@ -18,8 +18,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fkknb"]
-radius = 23.086792
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ys6sa"]
+radius = 21.0
+height = 76.0
 
 [node name="NPC" type="Node2D" unique_id=201679181]
 y_sort_enabled = true
@@ -38,6 +39,7 @@ frame_progress = 0.71586317
 offset = Vector2(0, -500)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1810027140]
+z_index = 1
 y_sort_enabled = true
-position = Vector2(1, -39)
-shape = SubResource("CircleShape2D_fkknb")
+position = Vector2(3, -49)
+shape = SubResource("CapsuleShape2D_ys6sa")

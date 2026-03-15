@@ -21,13 +21,10 @@ func _ready() -> void:
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		print("Clicked")
 		print(dialogueBox)
 		if dialogueBox:
-			print("DialogueBox")
 			dialogueBox.visible = !dialogueBox.visible
 			if dialogueBox.visible:
-				print("Dialog box called")
 				dialogueBox.updateDialogue()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

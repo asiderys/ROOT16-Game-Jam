@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck73yqfjwfe28"
-path="res://.godot/imported/Orb 1.png-e75ca930823fa1dca76f89d43da8046e.ctex"
+uid="uid://kdwhj5efkdll"
+path="res://.godot/imported/NEW CASH REGISTER.png-c1916f4a4eea140c94491a09b234d6d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/aliens/orb/Orb 1.png"
-dest_files=["res://.godot/imported/Orb 1.png-e75ca930823fa1dca76f89d43da8046e.ctex"]
+source_file="res://art/ui_elements/NEW CASH REGISTER.png"
+dest_files=["res://.godot/imported/NEW CASH REGISTER.png-c1916f4a4eea140c94491a09b234d6d9.ctex"]
 
 [params]
 
