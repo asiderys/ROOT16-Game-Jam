@@ -24,6 +24,6 @@ func decrease_purchase_amount() -> void:
 		get_node("../../../..").update_total_cost(self_data.cost * -1)
 
 func increase_purchase_amount() -> void:
-	$Increment.play
+	$Increment.play()
 	amount_purchase = amount_purchase + 1
 	get_node("../../../..").update_total_cost(self_data.cost)
