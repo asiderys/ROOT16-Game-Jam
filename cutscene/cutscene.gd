@@ -18,6 +18,7 @@ func _ready() -> void:
 	var x_size = get_viewport().get_visible_rect().size.x
 	$AnimationPlayer/Guide.position.x =  x_size  - 150
 	$AnimationPlayer/Guide.position.y = get_viewport().get_visible_rect().size.y
+	$CutsceneMusic.play()
 	$SpeachBubble/InfoLbl.text = slides[cur_slide]
 	$AnimationPlayer/Guide.play()
 
@@ -26,6 +27,7 @@ func next_slide() -> void:
 		return
 	clickable = false
 	if cur_slide > (len(slides) - 2):
+		global.music_pos = $CutsceneMusic.get_playback_position()
 		get_tree().change_scene_to_file("res://character_selection/character_selection.tscn")
 	if (cur_slide + 2) % walk_time == 0:
 		if guide_pos == side.RIGHT:

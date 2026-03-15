@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpcpg2llq23m0"
-path="res://.godot/imported/SPACESHIP BASE.png-3748c1a7806c4ac46156f7efbd124370.ctex"
+uid="uid://bf4x0l5ry6no0"
+path="res://.godot/imported/3.png-5084cd2769fa093443642bc2a6785fb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://SPACESHIP BASE.png"
-dest_files=["res://.godot/imported/SPACESHIP BASE.png-3748c1a7806c4ac46156f7efbd124370.ctex"]
+source_file="res://art/buckets/3.png"
+dest_files=["res://.godot/imported/3.png-5084cd2769fa093443642bc2a6785fb9.ctex"]
 
 [params]
 
