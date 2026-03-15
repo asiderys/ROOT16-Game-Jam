@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://blmry5sf6ax7n" path="res://music/stockingmusic.mp3" id="3_7puuq"]
 [ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="3_qo6ir"]
 [ext_resource type="Theme" uid="uid://b0v6fmwcig6rw" path="res://art/ui_elements/buttons/purple.tres" id="4_7111s"]
+[ext_resource type="AudioStream" uid="uid://bmljm1vluko8g" path="res://sound_effects/defaultbutton.wav" id="6_tmx7a"]
 
 [sub_resource type="Animation" id="Animation_575rj"]
 resource_name = "PurchaseError"
@@ -170,5 +171,8 @@ text = "Check Out →"
 stream = ExtResource("3_7puuq")
 autoplay = true
 parameters/looping = true
+
+[node name="DefaultButton" type="AudioStreamPlayer2D" parent="." unique_id=244106044]
+stream = ExtResource("6_tmx7a")
 
 [connection signal="pressed" from="Control/Button" to="." method="submit_purchase"]

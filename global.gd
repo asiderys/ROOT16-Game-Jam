@@ -16,6 +16,8 @@ func _process(delta: float) -> void:
 	pass
 	
 var music_pos = 0
+var trust = 0
+var profits = 0
 var buckets_data = {
 	1: {
 		"name":"Zorp 1",

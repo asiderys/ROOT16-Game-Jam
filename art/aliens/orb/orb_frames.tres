@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://bc6d26t8fphx5"]
 
-[ext_resource type="Texture2D" uid="uid://ck73yqfjwfe28" path="res://art/aliens/orb/Orb 1.png" id="1_4ctyb"]
+[ext_resource type="Texture2D" uid="uid://ck73yqfjwfe28" path="res://art/aliens/orb/orb 1.png" id="1_4ctyb"]
 [ext_resource type="Texture2D" uid="uid://h58yrof3nk6b" path="res://art/aliens/orb/Orb 2.png" id="2_0584n"]
 
 [resource]

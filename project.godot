@@ -23,6 +23,7 @@ global="*uid://bm8t3vt1tan8f"
 [display]
 
 window/size/mode=4
+window/stretch/mode="viewport"
 
 [physics]
 

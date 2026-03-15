@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://des5blktv8v0v" path="res://cutscene/cutscene.gd" id="1_bl24s"]
 [ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_ye7fo"]
-[ext_resource type="Texture2D" uid="uid://chsv3v62m1en2" path="res://art/aliens/blorpl/borpl01.png" id="2_8vcau"]
+[ext_resource type="Texture2D" uid="uid://chsv3v62m1en2" path="res://art/aliens/blorpl/blorpl 1.png" id="2_8vcau"]
 [ext_resource type="Texture2D" uid="uid://c7lfiyixgea4l" path="res://art/aliens/blorpl/borpl02.png" id="3_bl24s"]
 [ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="3_v82cg"]
 [ext_resource type="Script" uid="uid://bvxpr60r2vho" path="res://alien_voice/alien_voice.gd" id="5_u4yv4"]

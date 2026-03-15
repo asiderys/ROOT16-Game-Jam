@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://cr5icgkhbtrdx"]
+
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_1uqj3"]
+[ext_resource type="Script" uid="uid://ct1jg1c6fnv7y" path="res://endings/endings.gd" id="1_7ilvu"]
+[ext_resource type="SpriteFrames" uid="uid://cep1o2qlldjk4" path="res://art/aliens/goomi_gami/goomi_gami_frames.tres" id="2_7ilvu"]
+[ext_resource type="SpriteFrames" uid="uid://fa0ygf7kd8x7" path="res://art/aliens/PT/PT_frames.tres" id="5_00nh0"]
+[ext_resource type="SpriteFrames" uid="uid://ctwie4j1g058m" path="res://art/aliens/strange_steve/strange_steve_frames.tres" id="5_ilihb"]
+[ext_resource type="SpriteFrames" uid="uid://dwxu5gdn6btil" path="res://art/aliens/sausage/sausage_frames.tres" id="5_ubvbi"]
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="8_00nh0"]
+[ext_resource type="AudioStream" uid="uid://bf5f1lcjsgx47" path="res://music/titlemusic.mp3" id="9_00nh0"]
+[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://art/ui_elements/START PAGE Title Text.png" id="9_ypho5"]
+[ext_resource type="AudioStream" uid="uid://7xvtwawarplh" path="res://AlienSounds/aliensound0.wav" id="10_ypho5"]
+
+[sub_resource type="Animation" id="Animation_ypho5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoAnimator/StartPageTitleText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(591, 99)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LogoAnimator/StartPageTitleText:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.15925929, 0.15925929)]
+}
+
+[sub_resource type="Animation" id="Animation_hr82h"]
+resource_name = "logo"
+length = 3.3666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoAnimator/StartPageTitleText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.3666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(591, 99), Vector2(591, 219.16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LogoAnimator/StartPageTitleText:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.3666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.15925929, 0.15925929), Vector2(0.354, 0.354)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mxkwu"]
+_data = {
+&"RESET": SubResource("Animation_ypho5"),
+&"logo": SubResource("Animation_hr82h")
+}
+
+[sub_resource type="Animation" id="Animation_mxkwu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gk6lt"]
+resource_name = "fade_in"
+length = 5.0
+capture_included = true
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 2,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_asu1g"]
+_data = {
+&"RESET": SubResource("Animation_mxkwu"),
+&"fade_in": SubResource("Animation_gk6lt")
+}
+
+[node name="Endings" type="Node2D" unique_id=2119706267]
+script = ExtResource("1_7ilvu")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=850889394]
+position = Vector2(586.3333, 327.5)
+scale = Vector2(0.61388886, 0.61388886)
+texture = ExtResource("1_1uqj3")
+
+[node name="LogoAnimator" type="AnimationPlayer" parent="." unique_id=112393904]
+libraries/ = SubResource("AnimationLibrary_mxkwu")
+
+[node name="StartPageTitleText" type="Sprite2D" parent="LogoAnimator" unique_id=1750748018]
+position = Vector2(591, 99)
+scale = Vector2(0.15925929, 0.15925929)
+texture = ExtResource("9_ypho5")
+
+[node name="GoomiGami" type="AnimatedSprite2D" parent="." unique_id=708330307]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(446.5833, 511)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("2_7ilvu")
+
+[node name="sausage" type="AnimatedSprite2D" parent="." unique_id=550271030]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(891.5833, 486)
+scale = Vector2(0.1, 0.1)
+sprite_frames = ExtResource("5_ubvbi")
+speed_scale = 0.8
+
+[node name="PT" type="AnimatedSprite2D" parent="." unique_id=2021982541]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(678.58325, 495.00003)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("5_00nh0")
+speed_scale = 0.7
+
+[node name="StrangeSteve" type="AnimatedSprite2D" parent="." unique_id=1946330178]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(208.0001, 492)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("5_ilihb")
+speed_scale = 0.9
+
+[node name="SimpleStats" type="Node2D" parent="." unique_id=1039031706]
+
+[node name="ProfitsLbl" type="Label" parent="SimpleStats" unique_id=347404020]
+offset_left = 469.0
+offset_top = 207.0
+offset_right = 729.0
+offset_bottom = 237.0
+theme_override_fonts/font = ExtResource("8_00nh0")
+theme_override_font_sizes/font_size = 30
+text = "Total Profits: 1000"
+
+[node name="TrustLbl" type="Label" parent="SimpleStats" unique_id=204682387]
+offset_left = 485.0
+offset_top = 269.0
+offset_right = 718.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("8_00nh0")
+theme_override_font_sizes/font_size = 30
+text = "Total Trust: 1000"
+
+[node name="StatsMsg" type="Label" parent="." unique_id=1592956060]
+visible = false
+offset_left = 318.0
+offset_top = 184.0
+offset_right = 849.0
+offset_bottom = 346.0
+theme_override_fonts/font = ExtResource("8_00nh0")
+theme_override_font_sizes/font_size = 30
+text = "You successfully developed great community relations, so your store was trusted enough by your customers to support and fulfill the community’s needs to aid in their issues with accessibility to healthy and affordable food."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Dynamic" type="Node2D" parent="." unique_id=1381960145]
+
+[node name="blorpl" type="Sprite2D" parent="Dynamic" unique_id=683897896]
+position = Vector2(320.58328, 554)
+scale = Vector2(0.10486108, 0.10486108)
+
+[node name="orb" type="Sprite2D" parent="Dynamic" unique_id=1688143667]
+position = Vector2(555.58325, 555)
+scale = Vector2(0.10486108, 0.10486108)
+
+[node name="SPHEEP" type="Sprite2D" parent="Dynamic" unique_id=569431367]
+position = Vector2(798.5832, 556)
+scale = Vector2(0.10486108, 0.10486108)
+
+[node name="bello_jello" type="Sprite2D" parent="Dynamic" unique_id=1387532385]
+position = Vector2(1013.58325, 545)
+scale = Vector2(0.10486108, 0.10486108)
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=828480178]
+stream = ExtResource("9_00nh0")
+
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="." unique_id=1071391725]
+stream = ExtResource("10_ypho5")
+
+[node name="Fade" type="AnimationPlayer" parent="." unique_id=702151972]
+libraries/ = SubResource("AnimationLibrary_asu1g")
+
+[node name="ColorRect" type="ColorRect" parent="Fade" unique_id=2112030303]
+offset_left = -34.0
+offset_top = -27.0
+offset_right = 1204.0
+offset_bottom = 681.0
+color = Color(0, 0, 0, 1)

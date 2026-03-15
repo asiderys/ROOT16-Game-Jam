@@ -9,6 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="7_ftqaf"]
 [ext_resource type="PackedScene" uid="uid://8qay6q5iwyxt" path="res://alien_voice/alien_voice.tscn" id="7_odr2s"]
 [ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="7_uqmvk"]
+[ext_resource type="AudioStream" uid="uid://deibjirt7y526" path="res://sound_effects/choosecharacter.wav" id="10_uqmvk"]
+[ext_resource type="AudioStream" uid="uid://bmljm1vluko8g" path="res://sound_effects/defaultbutton.wav" id="11_lbfmo"]
 
 [node name="CharacterSelection" type="Control" unique_id=93252415]
 layout_mode = 3
@@ -159,6 +161,12 @@ text = ">"
 stream = ExtResource("7_ftqaf")
 autoplay = true
 parameters/looping = true
+
+[node name="ChooseCharacter" type="AudioStreamPlayer2D" parent="." unique_id=1765796040]
+stream = ExtResource("10_uqmvk")
+
+[node name="DefaultButton" type="AudioStreamPlayer2D" parent="." unique_id=1508532344]
+stream = ExtResource("11_lbfmo")
 
 [connection signal="pressed" from="ContinueContainer/ContinueBtn" to="." method="_on_continue_btn_pressed"]
 [connection signal="pressed" from="ChangeSprite/Prev" to="." method="prev_sprite"]

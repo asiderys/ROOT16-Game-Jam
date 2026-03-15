@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chsv3v62m1en2"
-path="res://.godot/imported/borpl01.png-7c08375ec2ed25720d48d281c9cba6e2.ctex"
+uid="uid://dqwrpg5v0drx1"
+path="res://.godot/imported/bello_jello 1.png-72f447968f476103e6be05e1ec1e080f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/aliens/blorpl/borpl01.png"
-dest_files=["res://.godot/imported/borpl01.png-7c08375ec2ed25720d48d281c9cba6e2.ctex"]
+source_file="res://art/aliens/bello_jello/bello_jello 1.png"
+dest_files=["res://.godot/imported/bello_jello 1.png-72f447968f476103e6be05e1ec1e080f.ctex"]
 
 [params]
 

@@ -23,6 +23,7 @@ func update_total_cost(update_val):
 	total_cost += update_val
 	$AnimationPlayer/HBoxContainer/CurrentCost.text = "Current cost: " + str(total_cost)
 func submit_purchase() -> void:
+	$DefaultButton.play()
 	if global.money >= total_cost:
 		for product in $Layout/ScrollBox/ProductCardContainer.get_children():
 			global.store_stock[product.self_data] = product.amount_purchase
