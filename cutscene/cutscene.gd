@@ -3,7 +3,7 @@ var slides = [
 	"Welcome to Marad Galaxy! We are happy to have you here.",
 	"Over the last few years, the galaxy has been struggling to maintain consistent access to healthy and affordable food for planets that are farther from the galaxy hub.",
 	"Misson-driven and healthy community food stores have been implemented in these areas but have failed to see success in terms of improving food purchasing and consumption patterns.",
-	"A new strategy of focusing on community engagement and developing customer relationships through buy-in has been devised.",
+	"A new strategy of focusing on community engagement and developing customer relationships has been devised.",
 	"You have hired on as the manager of a mobile community food store to put these strategies into action."
 ]
 var cur_slide = 0

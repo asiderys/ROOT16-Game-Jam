@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/images/Blorpl 1.png" id="3_2dbit"]
 [ext_resource type="Texture2D" uid="uid://djhe50owpgrn4" path="res://store-layout/images/Blorpl 2.png" id="4_eucd7"]
 [ext_resource type="Texture2D" uid="uid://kdwhj5efkdll" path="res://art/ui_elements/NEW CASH REGISTER.png" id="6_urqch"]
+[ext_resource type="Script" uid="uid://co870w8iekaam" path="res://store-layout/progress_bar.gd" id="8_sy3ys"]
+[ext_resource type="Texture2D" uid="uid://dtyaol2n661tv" path="res://art/TRUST METER.png" id="9_fcvw3"]
+[ext_resource type="AudioStream" uid="uid://bbirrnkn8vdcl" path="res://music/storemusic.mp3" id="10_fcvw3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2dbit"]
 radius = 33.37664
@@ -49,6 +52,12 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urqch"]
+bg_color = Color(0.81960785, 0.92941177, 0.05882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0k3n"]
+bg_color = Color(0.23416314, 0.1592026, 0.61222243, 1)
+
 [node name="Node2D" type="Node2D" unique_id=555568952]
 y_sort_enabled = true
 script = ExtResource("1_ipnrw")
@@ -70,7 +79,7 @@ position = Vector2(951, 327)
 [node name="Background" parent="." unique_id=2065809239 instance=ExtResource("1_2dbit")]
 z_index = -1
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2045894891]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2045894891 groups=["player"]]
 y_sort_enabled = true
 script = ExtResource("1_p4ya5")
 
@@ -143,4 +152,29 @@ wait_time = 20.0
 one_shot = true
 autostart = true
 
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1721545956]
+offset_left = 1445.0
+offset_top = 956.0
+offset_right = 1874.0
+offset_bottom = 1027.0
+theme_override_styles/background = SubResource("StyleBoxFlat_urqch")
+theme_override_styles/fill = SubResource("StyleBoxFlat_c0k3n")
+step = 1.0
+script = ExtResource("8_sy3ys")
+
+[node name="TrustMeter" type="Sprite2D" parent="." unique_id=827262162]
+position = Vector2(1597, 998)
+scale = Vector2(0.44496635, 0.4449664)
+texture = ExtResource("9_fcvw3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2103978791]
+stream = ExtResource("10_fcvw3")
+autoplay = true
+parameters/looping = true
+
+[node name="Timer2" type="Timer" parent="." unique_id=958323596]
+wait_time = 4.0
+autostart = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

@@ -39,11 +39,11 @@ const NUM_NPCS = 5 # how many NPCs we want to spawn
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	randomize()
 	spawn_bins()
-	await get_tree().create_timer(5.0).timeout # just wait a few seconds before spawning any NPCs
-	for i in range (NUM_NPCS):
-		random_npc()
-		await get_tree().create_timer(20.0).timeout 
+	#for i in range (NUM_NPCS):
+		#random_npc()
+		#await get_tree().create_timer(60.0).timeout 
 
 func random_npc():
 	# pick an alien, any alien...
@@ -119,3 +119,10 @@ func _on_timer_timeout() -> void:
 		get_tree().change_scene_to_file("res://restocking/Restocking.tscn")
 	else:
 		get_tree().change_scene_to_file("res://endings/endings.tscn")
+
+
+func _on_timer_2_timeout() -> void:
+	random_npc()
+	$Timer2.wait_time = randi_range(6, 10)
+	$Timer2.start()
+	

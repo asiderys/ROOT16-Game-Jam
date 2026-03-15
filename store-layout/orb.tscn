@@ -22,6 +22,9 @@ animations = [{
 radius = 21.0
 height = 76.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ys6sa"]
+radius = 216.03703
+
 [node name="NPC" type="Node2D" unique_id=201679181]
 y_sort_enabled = true
 script = ExtResource("1_ys6sa")
@@ -43,3 +46,12 @@ z_index = 1
 y_sort_enabled = true
 position = Vector2(3, -49)
 shape = SubResource("CapsuleShape2D_ys6sa")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1562041606]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1109281295]
+position = Vector2(3, -55)
+shape = SubResource("CircleShape2D_ys6sa")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

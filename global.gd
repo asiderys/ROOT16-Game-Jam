@@ -3,7 +3,7 @@ extends Node
 var day = 1
 var store_stock = {}
 var trust_vals = {}
-var money = 100
+var money = 700
 var maxProductTrust = 0
 var player_sprite = null
 

@@ -2,7 +2,7 @@ extends PathFollow2D
 
 var npcSpeed = 200
 var stopPoints = [600, 1100]
-var stopTime = 8 # TODO: make different stop times for each 
+var stopTime = 3 # TODO: make different stop times for each 
 var hasWaited = [true, true]
 var isWaiting = false
 var bubble = 0
