@@ -53,7 +53,8 @@ _data = {
 point_count = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urqch"]
-bg_color = Color(0.81960785, 0.92941177, 0.05882353, 1)
+bg_color = Color(0.5019608, 0, 0.5019608, 1)
+draw_center = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0k3n"]
 bg_color = Color(0.23416314, 0.1592026, 0.61222243, 1)
@@ -148,7 +149,7 @@ rotates = false
 z_index = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=904551443]
-wait_time = 20.0
+wait_time = 11.51
 one_shot = true
 autostart = true
 

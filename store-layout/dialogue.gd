@@ -32,6 +32,7 @@ func updateDialogue():
 		if global.trust_vals[randItem.id] > global.maxProductTrust:
 			global.maxProductTrust = global.trust_vals[randItem.id]
 	self.show()
+	global.suggestions.append(dialogueBox.text)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	randomize()

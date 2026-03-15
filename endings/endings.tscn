@@ -9,7 +9,7 @@
 [ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="8_00nh0"]
 [ext_resource type="AudioStream" uid="uid://bf5f1lcjsgx47" path="res://music/titlemusic.mp3" id="9_00nh0"]
 [ext_resource type="Texture2D" uid="uid://dqwrpg5v0drx1" path="res://art/aliens/bello_jello/bello_jello 1.png" id="9_y6xqr"]
-[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://art/ui_elements/START PAGE Title Text.png" id="9_ypho5"]
+[ext_resource type="Texture2D" uid="uid://i0fcu4bs5gy1" path="res://start-screen/START PAGE Title Text.png" id="9_ypho5"]
 [ext_resource type="AudioStream" uid="uid://7xvtwawarplh" path="res://AlienSounds/aliensound0.wav" id="10_ypho5"]
 
 [sub_resource type="Animation" id="Animation_ypho5"]
@@ -123,6 +123,7 @@ texture = ExtResource("1_1uqj3")
 libraries/ = SubResource("AnimationLibrary_mxkwu")
 
 [node name="StartPageTitleText" type="Sprite2D" parent="LogoAnimator" unique_id=1750748018]
+visible = false
 position = Vector2(591, 99)
 scale = Vector2(0.15925929, 0.15925929)
 texture = ExtResource("9_ypho5")

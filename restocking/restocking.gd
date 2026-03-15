@@ -1,6 +1,7 @@
 extends Control
 @onready var product_card_scene = preload("res://restocking/product_card.tscn")
 const product_data = preload("res://restocking/product_data.gd")
+@onready var suggest = preload("res://store-layout/suggestion.tscn")
 var total_cost = 0
 var bucket_num = 8
 var products = [
@@ -14,6 +15,10 @@ var products = [
 	["Torp", "torp", "Super store", 90, "", 3],
 ]
 func _ready() -> void:
+	for i in global.suggestions:
+		var temp = suggest.instantiate()
+		temp.set_text(i)
+		$ScrollContainer/VBoxContainer.add_child(temp)
 	if global.store_stock.size() == 0:
 		for item in products:
 			var data = product_data.new()
