@@ -109,22 +109,17 @@ texture = ExtResource("1_ye7fo")
 
 [node name="SpeachBubble" type="Control" parent="." unique_id=1077860436]
 layout_mode = 1
-anchor_right = 1.0
+anchor_left = 0.2
+anchor_right = 0.8
 anchor_bottom = 1.0
-offset_left = 150.0
-offset_top = 150.0
-offset_right = -150.0
-offset_bottom = -150.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InfoLbl" type="Label" parent="SpeachBubble" unique_id=1928904878]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_v82cg")
 theme_override_font_sizes/font_size = 33

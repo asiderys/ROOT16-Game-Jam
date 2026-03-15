@@ -12,8 +12,6 @@ var aliens = [
 ]
 var current_alien = 0
 func _ready() -> void:
-	$CharacterSelectionMusic.seek(global.music_pos)
-	$CharacterSelectionMusic.play()
 	$SelectedVBox/SelectedHBox/Selected.sprite_frames = load("res://art/aliens/" + aliens[current_alien] + "/" + aliens[current_alien] + "_frames.tres")
 	$SelectedVBox/SelectedHBox/Selected.play()
 func next_sprite():
@@ -26,3 +24,8 @@ func prev_sprite():
 	$SelectedVBox/SelectedHBox/Selected.sprite_frames = load("res://art/aliens/" + aliens[current_alien] + "/" + aliens[current_alien] + "_frames.tres")
 	$SelectedVBox/SelectedHBox/Selected.play()
 	global.player_sprite = $SelectedVBox/SelectedHBox/Selected.sprite_frames
+
+
+func _on_continue_btn_pressed() -> void:
+	global.music_pos = $CharacterSelectionMusic.get_playback_position()
+	get_tree().change_scene_to_file("res://spaceship_selection/spaceship_selection.tscn")
