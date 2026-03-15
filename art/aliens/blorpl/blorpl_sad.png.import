@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhcy5t7to1na8"
-path="res://.godot/imported/Bello Jello 2.png-0857230a00bad1b69c7ca6f619e14b6e.ctex"
+uid="uid://dhl4qgplttreq"
+path="res://.godot/imported/blorpl_sad.png-daab2c40767adb9520e64d301f5b4dd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/aliens/bello_jello/Bello Jello 2.png"
-dest_files=["res://.godot/imported/Bello Jello 2.png-0857230a00bad1b69c7ca6f619e14b6e.ctex"]
+source_file="res://art/aliens/blorpl/blorpl_sad.png"
+dest_files=["res://.godot/imported/blorpl_sad.png-daab2c40767adb9520e64d301f5b4dd3.ctex"]
 
 [params]
 
