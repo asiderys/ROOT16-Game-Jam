@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ctwie4j1g058m"]
+
+[ext_resource type="Texture2D" uid="uid://wer4imkkv2fv" path="res://art/aliens/strange_steve/Strange Steve 1.png" id="1_4dkkn"]
+[ext_resource type="Texture2D" uid="uid://cunq7hjv86l88" path="res://art/aliens/strange_steve/Strange Steve 2.png" id="2_0rlvj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4dkkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0rlvj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

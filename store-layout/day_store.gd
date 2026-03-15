@@ -8,10 +8,10 @@ var stopTime: float = 6.0
 var npc = 0
 var npcSpeed = 200
 var pathFollow2D = 0
-var testDict = {"Yellow": 1, "Orange": 0, "Pink": 1, "Green": 1}
+var testDict = {"empty": 1,"xorp": 1, "zorp": 0, "dorp": 1, "morp": 1, "lorp":2, "torp":1, "shnorp": 1, "norp": 1}
 
 var thoughtBubble = preload("res://store-layout/thoughtBubble.tscn")
-
+const product_data = preload("res://restocking/product_data.gd")
 const orbNPC = preload("res://store-layout/orb.tscn")
 
 var npc_scene = preload("res://store-layout/orb.tscn")
@@ -32,6 +32,9 @@ const YELLOW = preload("res://store-layout/yellow_bin.tscn")
 const ORANGE = preload("res://store-layout/orange_bin.tscn")
 const PINK = preload("res://store-layout/pink_bin.tscn")
 const GREEN = preload("res://store-layout/green_bin.tscn")
+
+const BUCKET_SCENE = preload("res://store-layout/bucket.tscn")
+
 const NUM_NPCS = 5 # how many NPCs we want to spawn
 
 # Called when the node enters the scene tree for the first time.
@@ -77,18 +80,35 @@ func start_wait(loc, i):
 	hasNotWaited[i] = false
 
 func spawn_bins():
-	
 	# dictionary for strings (product name)
+
 	var bin_scenes = {"Yellow": YELLOW, "Orange": ORANGE, "Pink": PINK, "Green": GREEN}
-	
+	var pos_index = 0
+	var start_pos = Vector2(1113,327)
+	var cur_pos = start_pos
+	var diff = Vector2(-162, 150)
 	for bin in testDict:
 		var binInstance = 0
-		if testDict[bin] != 0:  
-			binInstance = bin_scenes[bin].instantiate()
+		var test_data = product_data.new()
+		test_data.cost = (randi() % 10) * 1
+		test_data.item_name = bin
+		test_data.sell_price = randi() % 20
+		test_data.trust_value = randi() % 5
+		test_data.store_name = "Store #" + str(randi() % 3)
+		test_data.id = "zorp123"
+		test_data.texture = bin
+		test_data.description = "dsfjdskflkdjfljdsflkjdslkf"
+		binInstance = BUCKET_SCENE.instantiate()
+		binInstance.change_type(test_data)
+		#var marker = get_node(bin + "Marker") # wacky string manipulation, messy but works ig?
+		if pos_index < (len(testDict) / 2):
+			cur_pos.x = (diff.x * (pos_index + 1)) + start_pos.x
+			binInstance.position = cur_pos
 		else:
-			binInstance = EMPTY_BIN.instantiate() # if quantity 0, place empty bin
-		var marker = get_node(bin + "Marker") # wacky string manipulation, messy but works ig?
-		binInstance.global_position = marker.global_position
+			cur_pos.x = (diff.x * (pos_index - (len(testDict)/2) + 1)) + start_pos.x
+			cur_pos.y = start_pos.y + diff.y
+			binInstance.position = cur_pos
+		pos_index += 1
 		add_child(binInstance)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

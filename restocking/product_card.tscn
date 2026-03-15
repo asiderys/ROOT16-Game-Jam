@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://dtxngu4u3aui3"]
+
+[ext_resource type="Script" uid="uid://d2sgm1uley0o3" path="res://restocking/product_card.gd" id="1_y2gr7"]
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="2_c1j47"]
+[ext_resource type="Texture2D" uid="uid://bf4x0l5ry6no0" path="res://art/buckets/3.png" id="2_fqylb"]
+[ext_resource type="Texture2D" uid="uid://s5x5ctxc7a7l" path="res://art/ui_elements/Profit.png" id="3_fqylb"]
+[ext_resource type="Texture2D" uid="uid://c1bmb7oxj1ed5" path="res://art/ui_elements/Trust.png" id="4_c1j47"]
+[ext_resource type="Texture2D" uid="uid://bpg5sdwdkl03s" path="res://art/ui_elements/Coins.png" id="5_70l83"]
+[ext_resource type="Theme" uid="uid://b0v6fmwcig6rw" path="res://art/ui_elements/buttons/purple.tres" id="5_gf6fb"]
+
+[node name="ProductCard" type="Control" unique_id=1393804491]
+custom_minimum_size = Vector2(507, 647)
+layout_mode = 3
+anchor_right = 0.45400003
+anchor_bottom = 0.5
+offset_right = -16.008057
+offset_bottom = 323.0
+script = ExtResource("1_y2gr7")
+
+[node name="Background" type="ColorRect" parent="." unique_id=697222245]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5647059, 0.6431373, 0.68235296, 1)
+
+[node name="ItemName" type="Label" parent="." unique_id=466583899]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 27.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_c1j47")
+theme_override_font_sizes/font_size = 30
+text = "Item Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=50442746]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -232.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fqylb")
+expand_mode = 5
+
+[node name="Decrease" type="Button" parent="." unique_id=1167901994]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 376.0
+offset_right = 186.0
+offset_bottom = 447.0
+theme = ExtResource("5_gf6fb")
+theme_override_font_sizes/font_size = 45
+text = "-"
+
+[node name="Amount" type="Label" parent="." unique_id=66805239]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 394.0
+offset_right = 293.0
+offset_bottom = 457.0
+theme_override_fonts/font = ExtResource("2_c1j47")
+theme_override_font_sizes/font_size = 45
+text = "150"
+horizontal_alignment = 1
+
+[node name="Increase" type="Button" parent="." unique_id=614458908]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 0
+offset_left = 319.0
+offset_top = 377.0
+offset_right = 379.0
+offset_bottom = 448.0
+theme = ExtResource("5_gf6fb")
+theme_override_font_sizes/font_size = 45
+text = "+"
+
+[node name="StoreName" type="Label" parent="." unique_id=2052639465]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -159.0
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_c1j47")
+theme_override_font_sizes/font_size = 25
+text = "Bob's store"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="." unique_id=592293909]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 534.99994
+offset_right = 238.83951
+offset_bottom = 707.8395
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("3_fqylb")
+expand_mode = 1
+
+[node name="TrustIcon" type="TextureRect" parent="." unique_id=1946258989]
+layout_mode = 0
+offset_left = 199.0
+offset_top = 542.99994
+offset_right = 327.0
+offset_bottom = 670.99994
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("4_c1j47")
+expand_mode = 1
+
+[node name="CoinsCount" type="Label" parent="." unique_id=1923440973]
+layout_mode = 0
+offset_left = 131.99997
+offset_top = 556.0
+offset_right = 179.99997
+offset_bottom = 598.0
+theme_override_fonts/font = ExtResource("2_c1j47")
+theme_override_font_sizes/font_size = 30
+text = "-40"
+
+[node name="ProfitIcon" type="TextureRect" parent="." unique_id=405294746]
+layout_mode = 0
+offset_left = 333.00003
+offset_top = 543.99994
+offset_right = 461.00003
+offset_bottom = 671.99994
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("5_70l83")
+expand_mode = 1
+
+[node name="ProfitCount" type="Label" parent="." unique_id=767356894]
+layout_mode = 0
+offset_left = 388.99994
+offset_top = 557.0
+offset_right = 432.99994
+offset_bottom = 599.0
+theme_override_fonts/font = ExtResource("2_c1j47")
+theme_override_font_sizes/font_size = 30
+text = "15"
+
+[node name="TrustCount" type="Label" parent="." unique_id=1371218531]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 556.0
+offset_right = 314.0
+offset_bottom = 598.0
+theme_override_fonts/font = ExtResource("2_c1j47")
+theme_override_font_sizes/font_size = 30
+text = "+25"
+
+[connection signal="pressed" from="Decrease" to="." method="decrease_purchase_amount"]
+[connection signal="pressed" from="Increase" to="." method="increase_purchase_amount"]
