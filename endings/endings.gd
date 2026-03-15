@@ -54,7 +54,7 @@ func _ready() -> void:
 		await get_tree().create_timer(9).timeout
 		$StatsMsg.position.x += (731-531)/2
 		$StatsMsg.size.x = 531
-		$StatsMsg.text = "Thank you for coming to our planet, we can now follow your store framework to implement impactful and effective community stores!"
+		$StatsMsg.text = "Thank you for coming to this planet, we can now follow your store framework to implement impactful and effective community stores!"
 		await get_tree().create_timer(6).timeout
 		$StatsMsg.visible = false
 		$LogoAnimator.play("logo")
