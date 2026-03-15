@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://cb2iayirmihbw"]
+
+[ext_resource type="Script" uid="uid://des5blktv8v0v" path="res://cutscene/cutscene.gd" id="1_bl24s"]
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="1_ye7fo"]
+[ext_resource type="Texture2D" uid="uid://chsv3v62m1en2" path="res://art/aliens/blorpl/blorpl 1.png" id="2_8vcau"]
+[ext_resource type="Texture2D" uid="uid://c7lfiyixgea4l" path="res://art/aliens/blorpl/borpl02.png" id="3_bl24s"]
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="3_v82cg"]
+[ext_resource type="Script" uid="uid://bvxpr60r2vho" path="res://alien_voice/alien_voice.gd" id="5_u4yv4"]
+[ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="7_1ox3v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4yv4"]
+border_width_left = 14
+
+[sub_resource type="Theme" id="Theme_p30sb"]
+/styles/box = SubResource("StyleBoxFlat_u4yv4")
+
+[sub_resource type="Animation" id="Animation_bl24s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Guide:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1025.0]
+}
+
+[sub_resource type="Animation" id="Animation_u4yv4"]
+resource_name = "WalkLeft"
+length = 1.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Guide:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1770.0, 150.0]
+}
+
+[sub_resource type="Animation" id="Animation_p30sb"]
+resource_name = "WalkRight"
+length = 1.9666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Guide:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.7333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [150.0, 1770.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p30sb"]
+_data = {
+&"RESET": SubResource("Animation_bl24s"),
+&"WalkLeft": SubResource("Animation_u4yv4"),
+&"WalkRight": SubResource("Animation_p30sb")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_53jq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8vcau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bl24s")
+}],
+"loop": true,
+"name": &"bouncing",
+"speed": 3.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4yv4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bl24s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p30sb"]
+
+[node name="Cutscene" type="Control" unique_id=1182014956]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_p30sb")
+script = ExtResource("1_bl24s")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2045622344]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ye7fo")
+
+[node name="SpeachBubble" type="Control" parent="." unique_id=1077860436]
+layout_mode = 1
+anchor_left = 0.2
+anchor_right = 0.8
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InfoLbl" type="Label" parent="SpeachBubble" unique_id=1928904878]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_v82cg")
+theme_override_font_sizes/font_size = 33
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=584785566]
+libraries/ = SubResource("AnimationLibrary_p30sb")
+
+[node name="Guide" type="AnimatedSprite2D" parent="AnimationPlayer" unique_id=2037366832]
+position = Vector2(1025, 647.99994)
+scale = Vector2(0.22041665, 0.24740742)
+sprite_frames = SubResource("SpriteFrames_53jq0")
+animation = &"bouncing"
+frame = 1
+frame_progress = 0.47921744
+offset = Vector2(0, -567.535)
+
+[node name="NextBtn" type="Button" parent="." unique_id=1729918]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u4yv4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bl24s")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p30sb")
+
+[node name="AlienVoice" type="AudioStreamPlayer2D" parent="." unique_id=3281925]
+script = ExtResource("5_u4yv4")
+
+[node name="Label" type="Label" parent="." unique_id=625727536]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -127.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_v82cg")
+theme_override_font_sizes/font_size = 20
+text = "(Click for next)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CutsceneMusic" type="AudioStreamPlayer2D" parent="." unique_id=1448370862]
+stream = ExtResource("7_1ox3v")
+volume_db = 6.804
+parameters/looping = true
+
+[connection signal="pressed" from="NextBtn" to="." method="next_slide"]

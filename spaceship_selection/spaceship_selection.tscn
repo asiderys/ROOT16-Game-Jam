@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://beq5xudhh4nay"]
+
+[ext_resource type="Texture2D" uid="uid://4vr8qb8wiqpq" path="res://art/backgrounds/start_page_bg.jpg" id="2_orgjf"]
+[ext_resource type="FontFile" uid="uid://b6mk7wnr8kmrh" path="res://connection_ii/ConnectionII.otf" id="3_8ajqg"]
+[ext_resource type="Theme" uid="uid://b0v6fmwcig6rw" path="res://art/ui_elements/buttons/purple.tres" id="4_ec0cc"]
+[ext_resource type="Script" uid="uid://g38uscnst0n7" path="res://spaceship_selection/guide.gd" id="5_bc2ty"]
+[ext_resource type="Script" uid="uid://biycpv74s4laa" path="res://spaceship_selection/spaceship_selection.gd" id="5_c436q"]
+[ext_resource type="SpriteFrames" uid="uid://damlu10ku3ce" path="res://art/aliens/blorpl/blorpl_frames.tres" id="6_0k25t"]
+[ext_resource type="PackedScene" uid="uid://8qay6q5iwyxt" path="res://alien_voice/alien_voice.tscn" id="7_qcduf"]
+[ext_resource type="Texture2D" uid="uid://dncj3afafn3b3" path="res://art/spaceship_full.png" id="8_bc2ty"]
+[ext_resource type="Texture2D" uid="uid://dnno5xamqbjeh" path="res://art/spaceship_no_windows.png" id="9_gf8nu"]
+[ext_resource type="AudioStream" uid="uid://dmihw7kixfjq1" path="res://music/cutscenebackground.mp3" id="9_vs1fp"]
+[ext_resource type="AudioStream" uid="uid://ckesvsida68" path="res://sound_effects/spaceship.wav" id="11_ihpah"]
+[ext_resource type="AudioStream" uid="uid://bmljm1vluko8g" path="res://sound_effects/defaultbutton.wav" id="12_ihpah"]
+
+[node name="SpaceshipSelection" type="Control" unique_id=93252415]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_c436q")
+
+[node name="Background" type="TextureRect" parent="." unique_id=858483541]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_orgjf")
+expand_mode = 3
+
+[node name="SelectLbl" type="Label" parent="." unique_id=2036187707]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 118.0
+offset_bottom = 181.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_8ajqg")
+theme_override_font_sizes/font_size = 45
+text = "Select a Spaceship"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueContainer" type="Control" parent="." unique_id=935102749]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -96.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContinueBtn" type="Button" parent="ContinueContainer" unique_id=1253770905]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -76.0
+offset_right = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_ec0cc")
+theme_override_font_sizes/font_size = 25
+text = "Continue"
+
+[node name="Guide" type="Control" parent="." unique_id=1288165488]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("5_bc2ty")
+
+[node name="GuideFrames" type="AnimatedSprite2D" parent="Guide" unique_id=680985601]
+position = Vector2(156, -83.00001)
+scale = Vector2(0.21444449, 0.21444446)
+sprite_frames = ExtResource("6_0k25t")
+
+[node name="AlienVoice" parent="Guide" unique_id=137993742 instance=ExtResource("7_qcduf")]
+
+[node name="ColorRect" type="Control" parent="Guide" unique_id=1526567121]
+anchors_preset = 0
+offset_left = 260.0
+offset_top = -418.0
+offset_right = 670.0
+offset_bottom = -217.0
+
+[node name="Label" type="Label" parent="Guide/ColorRect" unique_id=1257877970]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = 59.0
+offset_right = -31.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_8ajqg")
+theme_override_font_sizes/font_size = 22
+text = "Go ahead and choose your alien!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SelectedVBox" type="VBoxContainer" parent="." unique_id=1446250245]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="SelectedHBox" type="HBoxContainer" parent="SelectedVBox" unique_id=1473841477]
+layout_mode = 2
+alignment = 1
+
+[node name="Windows" type="Sprite2D" parent="SelectedVBox/SelectedHBox" unique_id=1819019313]
+modulate = Color(0, 0.654902, 1, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_bc2ty")
+
+[node name="Selected" type="Sprite2D" parent="SelectedVBox/SelectedHBox" unique_id=1047039095]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_gf8nu")
+
+[node name="ChangeSprite" type="HBoxContainer" parent="." unique_id=43734237]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 279.0
+offset_bottom = 329.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 300
+alignment = 1
+
+[node name="Prev" type="Button" parent="ChangeSprite" unique_id=151221283]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("4_ec0cc")
+text = "<"
+
+[node name="Next" type="Button" parent="ChangeSprite" unique_id=1683792461]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme = ExtResource("4_ec0cc")
+text = ">"
+
+[node name="SpaceshipSelectionMusic" type="AudioStreamPlayer2D" parent="." unique_id=267830055]
+stream = ExtResource("9_vs1fp")
+autoplay = true
+parameters/looping = true
+
+[node name="SpaceshipSelect" type="AudioStreamPlayer2D" parent="." unique_id=2144929171]
+stream = ExtResource("11_ihpah")
+volume_db = -15.2
+
+[node name="DefaultButton" type="AudioStreamPlayer2D" parent="." unique_id=276680146]
+stream = ExtResource("12_ihpah")
+
+[connection signal="pressed" from="ContinueContainer/ContinueBtn" to="." method="_on_continue_btn_pressed"]
+[connection signal="pressed" from="ChangeSprite/Prev" to="." method="prev_sprite"]
+[connection signal="pressed" from="ChangeSprite/Next" to="." method="next_sprite"]

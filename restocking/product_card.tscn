@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c1bmb7oxj1ed5" path="res://art/ui_elements/Trust.png" id="4_c1j47"]
 [ext_resource type="Texture2D" uid="uid://bpg5sdwdkl03s" path="res://art/ui_elements/Coins.png" id="5_70l83"]
 [ext_resource type="Theme" uid="uid://b0v6fmwcig6rw" path="res://art/ui_elements/buttons/purple.tres" id="5_gf6fb"]
+[ext_resource type="AudioStream" uid="uid://bnd1ruyon4662" path="res://sound_effects/incrementbutton.wav" id="8_riuoo"]
+[ext_resource type="AudioStream" uid="uid://day3j205k4put" path="res://sound_effects/decrementbutton.wav" id="9_sum8b"]
 
 [node name="ProductCard" type="Control" unique_id=1393804491]
 custom_minimum_size = Vector2(507, 647)
@@ -159,6 +161,12 @@ offset_bottom = 598.0
 theme_override_fonts/font = ExtResource("2_c1j47")
 theme_override_font_sizes/font_size = 30
 text = "+25"
+
+[node name="Increment" type="AudioStreamPlayer2D" parent="." unique_id=157663336]
+stream = ExtResource("8_riuoo")
+
+[node name="Decrement" type="AudioStreamPlayer2D" parent="." unique_id=2025689519]
+stream = ExtResource("9_sum8b")
 
 [connection signal="pressed" from="Decrease" to="." method="decrease_purchase_amount"]
 [connection signal="pressed" from="Increase" to="." method="increase_purchase_amount"]
