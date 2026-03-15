@@ -3,9 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://ci3hv60ioh843" path="res://store-layout/store_background.tscn" id="1_2dbit"]
 [ext_resource type="Script" uid="uid://3ktuorcdujhg" path="res://store-layout/day_store.gd" id="1_ipnrw"]
 [ext_resource type="Script" uid="uid://bk6ar2qhfyoco" path="res://store-layout/TileMovement.gd" id="1_p4ya5"]
-[ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/Blorpl 1.png" id="3_2dbit"]
-[ext_resource type="Texture2D" uid="uid://byvrdtmtw5qcr" path="res://store-layout/FRONT CASHIER REGISTER.png" id="3_i5ce1"]
-[ext_resource type="Texture2D" uid="uid://djhe50owpgrn4" path="res://store-layout/Blorpl 2.png" id="4_eucd7"]
+[ext_resource type="Texture2D" uid="uid://clagecxujumtv" path="res://store-layout/images/Blorpl 1.png" id="3_2dbit"]
+[ext_resource type="Texture2D" uid="uid://byvrdtmtw5qcr" path="res://store-layout/images/FRONT CASHIER REGISTER.png" id="3_i5ce1"]
+[ext_resource type="Texture2D" uid="uid://djhe50owpgrn4" path="res://store-layout/images/Blorpl 2.png" id="4_eucd7"]
+[ext_resource type="Texture2D" uid="uid://bg8q1d7sn5cgf" path="res://store-layout/images/Employee Worm.png" id="7_urqch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2dbit"]
 radius = 56.008926
@@ -117,6 +118,11 @@ position = Vector2(180, 361.00003)
 scale = Vector2(0.29559526, 0.23511901)
 texture = ExtResource("3_i5ce1")
 offset = Vector2(0, -300)
+
+[node name="EmployeeWorm" type="Sprite2D" parent="." unique_id=838666803]
+position = Vector2(166, 220.99998)
+scale = Vector2(0.12197976, 0.09702375)
+texture = ExtResource("7_urqch")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=1119737323]
 y_sort_enabled = true

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ci3hv60ioh843"]
 
-[ext_resource type="Texture2D" uid="uid://btt38mbgjxkp0" path="res://store-layout/Store Background.png" id="1_hp8yw"]
+[ext_resource type="Texture2D" uid="uid://btt38mbgjxkp0" path="res://store-layout/images/Store Background.png" id="1_hp8yw"]
 
 [sub_resource type="TileSet" id="TileSet_hp8yw"]
 

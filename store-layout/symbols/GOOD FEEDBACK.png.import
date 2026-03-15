@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btvfelcjnlqhv"
-path="res://.godot/imported/Background.jpg-afa63cf2bcadc980993ed31c54d07a41.ctex"
+uid="uid://v5lod7xa2c5i"
+path="res://.godot/imported/GOOD FEEDBACK.png-18b422a76ac49fe9f2327c71f846c2fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://store-layout/Background.jpg"
-dest_files=["res://.godot/imported/Background.jpg-afa63cf2bcadc980993ed31c54d07a41.ctex"]
+source_file="res://store-layout/symbols/GOOD FEEDBACK.png"
+dest_files=["res://.godot/imported/GOOD FEEDBACK.png-18b422a76ac49fe9f2327c71f846c2fc.ctex"]
 
 [params]
 

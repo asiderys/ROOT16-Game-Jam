@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djhe50owpgrn4"
-path="res://.godot/imported/Blorpl 2.png-58c237cb081ff916e44580527f75fd70.ctex"
+uid="uid://clagecxujumtv"
+path="res://.godot/imported/Blorpl 1.png-26c8c1b92eac00292b2a8db51c7716c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://store-layout/Blorpl 2.png"
-dest_files=["res://.godot/imported/Blorpl 2.png-58c237cb081ff916e44580527f75fd70.ctex"]
+source_file="res://store-layout/images/Blorpl 1.png"
+dest_files=["res://.godot/imported/Blorpl 1.png-26c8c1b92eac00292b2a8db51c7716c7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byvrdtmtw5qcr"
-path="res://.godot/imported/FRONT CASHIER REGISTER.png-91a610209440d60cf2a8260c0d41ea98.ctex"
+uid="uid://djhe50owpgrn4"
+path="res://.godot/imported/Blorpl 2.png-ebee3ec6c44bd5ec8cd62706d2f7cd6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://store-layout/FRONT CASHIER REGISTER.png"
-dest_files=["res://.godot/imported/FRONT CASHIER REGISTER.png-91a610209440d60cf2a8260c0d41ea98.ctex"]
+source_file="res://store-layout/images/Blorpl 2.png"
+dest_files=["res://.godot/imported/Blorpl 2.png-ebee3ec6c44bd5ec8cd62706d2f7cd6d.ctex"]
 
 [params]
 

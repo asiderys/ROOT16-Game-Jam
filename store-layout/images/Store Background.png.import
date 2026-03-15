@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clagecxujumtv"
-path="res://.godot/imported/Blorpl 1.png-180811d837a8e500a15b87f177a5506f.ctex"
+uid="uid://btt38mbgjxkp0"
+path="res://.godot/imported/Store Background.png-2b4f9945077a44a08cc4045de410beb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://store-layout/Blorpl 1.png"
-dest_files=["res://.godot/imported/Blorpl 1.png-180811d837a8e500a15b87f177a5506f.ctex"]
+source_file="res://store-layout/images/Store Background.png"
+dest_files=["res://.godot/imported/Store Background.png-2b4f9945077a44a08cc4045de410beb2.ctex"]
 
 [params]
 

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bamkeyuqowywr"]
+
+[ext_resource type="Texture2D" uid="uid://v5lod7xa2c5i" path="res://store-layout/symbols/GOOD FEEDBACK.png" id="1_qidfs"]
+
+[node name="Node2D" type="Node2D" unique_id=611159774]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=353905981]
+z_index = 1
+scale = Vector2(0.124587916, 0.12458791)
+texture = ExtResource("1_qidfs")
